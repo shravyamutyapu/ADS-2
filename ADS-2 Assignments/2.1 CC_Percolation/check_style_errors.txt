@@ -1,9 +1,2 @@
 Starting audit...
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\2.1 CC_Percolation\Percolation.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\2.1 CC_Percolation\Percolation.java:39:35: Expected @param tag for 'i'. [JavadocMethod]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\2.1 CC_Percolation\Percolation.java:39:48: Expected @param tag for 'j'. [JavadocMethod]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\2.1 CC_Percolation\Percolation.java:48:32: Expected @param tag for 'r'. [JavadocMethod]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\2.1 CC_Percolation\Percolation.java:48:45: Expected @param tag for 'c'. [JavadocMethod]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\2.1 CC_Percolation\Percolation.java:76: Expected @return tag. [JavadocMethod]
 Audit done.
-Checkstyle ends with 6 errors.

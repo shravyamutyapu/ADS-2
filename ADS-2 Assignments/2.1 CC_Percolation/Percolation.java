@@ -31,8 +31,8 @@ class Percolation {
     /**.
      * Gets the index.
      * time complexity in average case is 1.
-     * @param      i
-     * @param      j
+     * @param i variable.
+     * @param j variable.
      *
      * @return     The index.
      */
@@ -42,8 +42,8 @@ class Percolation {
     /**.
      * { function_description }
      * time complexity in average case is 1.
-     * @param      r
-     * @param      c
+     * @param r rows.
+     * @param c columns.
      */
     public void open(final int r, final int c) {
 
@@ -71,7 +71,7 @@ class Percolation {
     /**.
      * { function_description }
      * time complexity in average case is 1.
-     * @return
+     * @return boolean value.
      */
     public boolean percolates() {
         ConnectedComponent connected = new ConnectedComponent(glist);
