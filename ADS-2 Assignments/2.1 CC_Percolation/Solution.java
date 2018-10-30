@@ -1,5 +1,5 @@
-/**
- * importing Scanner.
+/**.
+ * importing scanner.
  */
 import java.util.Scanner;
 /**.
@@ -12,13 +12,15 @@ public final class Solution {
     private Solution() {
         //unused.
     }
-    /**
-     * @param args  The arguments
+    /**.
+     *
+     * @param      args  The arguments
      */
     // time complexity for the main method is O(N).
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        sc.nextLine();
         Percolation p = new Percolation(n);
         while (sc.hasNext()) {
             String line = sc.nextLine();
