@@ -1,0 +1,236 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+false
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+false
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 3: Passed ##########
+Expected Output: 
+false
+Your Output: 
+false
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 5: Failed ##########
+Expected Output: 
+false
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 6: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 7: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 8: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 9: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 10: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 11: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 12: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 13: Failed ##########
+Expected Output: 
+false
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 14: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 15: Failed ##########
+Expected Output: 
+false
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 16: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 17: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 18: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 19: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 20: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 21: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 22: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
+########## Testcase 23: Failed ##########
+Expected Output: 
+true
+Your Output: 
+Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at Solution.main(Solution.java:26)
+----------------------------------------
