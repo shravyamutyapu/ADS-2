@@ -7,7 +7,8 @@ import java.util.Iterator;
  */
 import java.util.NoSuchElementException;
 /**
- *stack class.
+ * Stack class.
+ * @param <Item> item type.
  */
 public class Stack<Item> implements Iterable<Item> {
 	/**
@@ -18,7 +19,9 @@ public class Stack<Item> implements Iterable<Item> {
      *  top of stack.
      */
     private Node first;
-    // helper linked list class
+    /**
+    * helper linked list class.
+    */
     private class Node {
     	/**
     	 * Item type.
@@ -40,6 +43,7 @@ public class Stack<Item> implements Iterable<Item> {
 
    /**
      * Is the stack empty?
+     * @return bool value.
      */
     public boolean isEmpty() {
         return first == null;
@@ -47,6 +51,7 @@ public class Stack<Item> implements Iterable<Item> {
 
    /**
      * Return the number of items in the stack.
+     * @return size.
      */
     public int size() {
         return size;
@@ -68,6 +73,7 @@ public class Stack<Item> implements Iterable<Item> {
      * item most recently added to the stack.
      * Throw an exception if no such item
      * exists because the stack is empty.
+     * @return Item.
      */
     public Item pop() {
         if (isEmpty()){
@@ -85,6 +91,7 @@ public class Stack<Item> implements Iterable<Item> {
      * added to the stack.
      * Throw an exception if no such
      * item exists because the stack is empty.
+     * @return Item.
      */
     public Item peek() {
         if (isEmpty()){
@@ -95,6 +102,7 @@ public class Stack<Item> implements Iterable<Item> {
 
    /**
      * Return string representation.
+     * @return String.
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -111,16 +119,33 @@ public class Stack<Item> implements Iterable<Item> {
     public Iterator<Item> iterator() {
     	return new ListIterator();
     }
-
+    /**
+     * List iterator class.
+     */
     // an iterator, doesn't implement remove() since it's optional
     private class ListIterator implements Iterator<Item> {
+    	/**
+    	 * points to current node.
+    	 * @return Node[description]
+    	 */
         private Node current = first;
+        /**
+         * has next()
+         * @return bool[description]
+         */
         public boolean hasNext() {
         	return current != null;
         }
+        /**
+         * remove method.
+         */
         public void remove() {
         	throw new UnsupportedOperationException();
         }
+        /**
+         * next method.
+         * @return Item[description]
+         */
 
         public Item next() {
             if (!hasNext()) {
