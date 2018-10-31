@@ -5,7 +5,8 @@ public class DirectedCycle {
     private Stack<Integer> cycle;    // directed cycle (or null if no such cycle)
 
     /**
-     * Determines whether the digraph {@code G} has a directed cycle and, if so,
+     * Determines whether the digraph
+     * {@code G} has a directed cycle and, if so,
      * finds such a cycle.
      * @param G the digraph
      */
@@ -17,7 +18,8 @@ public class DirectedCycle {
             if (!marked[v] && cycle == null) dfs(g, v);
     }
 
-    // check that algorithm computes either the topological order or finds a directed cycle
+    // check that algorithm computes
+    //either the topological order or finds a directed cycle
     private void dfs(Digraph g, int v) {
         onStack[v] = true;
         marked[v] = true;
@@ -48,15 +50,18 @@ public class DirectedCycle {
 
     /**
      * Does the digraph have a directed cycle?
-     * @return {@code true} if the digraph has a directed cycle, {@code false} otherwise
+     * @return {@code true} if the digraph
+     * has a directed cycle, {@code false} otherwise
      */
     public boolean hasCycle() {
         return cycle != null;
     }
 
     /**
-     * Returns a directed cycle if the digraph has a directed cycle, and {@code null} otherwise.
-     * @return a directed cycle (as an iterable) if the digraph has a directed cycle,
+     * Returns a directed cycle if the digraph has a
+     * directed cycle, and {@code null} otherwise.
+     * @return a directed cycle (as an iterable) if
+     * the digraph has a directed cycle,
      *    and {@code null} otherwise
      */
     public Iterable<Integer> cycle() {
@@ -64,7 +69,8 @@ public class DirectedCycle {
     }
 
 
-    // certify that digraph has a directed cycle if it reports one
+    // certify that digraph has a directed cycle
+    //if it reports one
     // private boolean check() {
 
     //     if (hasCycle()) {
