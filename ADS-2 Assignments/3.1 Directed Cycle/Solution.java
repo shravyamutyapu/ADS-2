@@ -22,9 +22,9 @@ public final class Solution {
         }
         DirectedCycle dir = new DirectedCycle(obj);
         if (dir.hasCycle()) {
-            System.out.println("Cycle exists");
+            System.out.println("Cycle exists.");
         }
-            System.out.println("Cycle doesn't exists");
+            System.out.println("Cycle doesn't exists.");
 
     }
 }
