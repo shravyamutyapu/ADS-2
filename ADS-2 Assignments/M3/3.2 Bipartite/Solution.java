@@ -14,17 +14,16 @@ public final class Solution {
         int vertexCount = Integer.parseInt(sc.nextLine());
         int edgeCount = Integer.parseInt(sc.nextLine());
         Graph obj = new Graph(vertexCount);
-        for(int i=0;i<edgeCount;i++) {
+        for (int i = 0; i < edgeCount; i++) {
             String[] tokens = sc.nextLine().split(" ");
             obj.addEdge(Integer.parseInt(tokens[0]),
-                         Integer.parseInt(tokens[1]));
+                        Integer.parseInt(tokens[1]));
         }
         Bipartite bipar = new Bipartite(obj);
         if (bipar.isBipartite()) {
             System.out.println("Graph is bipartite");
-        }
-        else {
-            System.out.println("Graph is bipartite");
+        } else {
+            System.out.println("Graph is not a bipartite");
 
         }
 
