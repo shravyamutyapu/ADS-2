@@ -59,8 +59,9 @@ public class Stack<Item> implements Iterable<Item> {
 
    /**
      * Add the item to the stack.
+     * @param item item.
      */
-    public void push(Item item) {
+    public void push(final Item item) {
         Node oldfirst = first;
         first = new Node();
         first.item = item;
@@ -76,7 +77,7 @@ public class Stack<Item> implements Iterable<Item> {
      * @return Item.
      */
     public Item pop() {
-        if (isEmpty()){
+        if (isEmpty()) {
        throw new RuntimeException("Stack underflow");
         }
         Item item = first.item;        // save item to return
@@ -94,7 +95,7 @@ public class Stack<Item> implements Iterable<Item> {
      * @return Item.
      */
     public Item peek() {
-        if (isEmpty()){
+        if (isEmpty()) {
         throw new RuntimeException("Stack underflow");
         }
         return first.item;
@@ -105,15 +106,17 @@ public class Stack<Item> implements Iterable<Item> {
      * @return String.
      */
     public String toString() {
-        StringBuilder s = new StringBuilder();
-        for (Item item : this)
+    	StringBuilder s = new StringBuilder();
+        for (Item item : this) {
             s.append(item + " ");
+        }
         return s.toString();
+
     }
 
 
    /**
-     * Return an iterator to the stack that
+     * Return an iterator to the stack that.
      * iterates through the items in LIFO order.
      */
     public Iterator<Item> iterator() {
@@ -122,7 +125,8 @@ public class Stack<Item> implements Iterable<Item> {
     /**
      * List iterator class.
      */
-    // an iterator, doesn't implement remove() since it's optional
+    // an iterator, doesn't implement
+    //remove() since it's optional.
     private class ListIterator implements Iterator<Item> {
     	/**
     	 * points to current node.

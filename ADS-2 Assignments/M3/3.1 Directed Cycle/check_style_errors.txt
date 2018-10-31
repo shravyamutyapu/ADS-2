@@ -1,12 +1,7 @@
 Starting audit...
 [ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:14:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:63:22: Parameter item should be final. [FinalParameters]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:63:27: Expected @param tag for 'item'. [JavadocMethod]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:79:23: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:97:23: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:109: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:119: Expected @return tag. [JavadocMethod]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:132: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:122: Expected @return tag. [JavadocMethod]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M3\3.1 Directed Cycle\Stack.java:136: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 4 errors.
