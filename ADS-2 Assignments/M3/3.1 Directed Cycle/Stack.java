@@ -11,9 +11,9 @@ import java.util.NoSuchElementException;
  * @param <Item> item type.
  */
 public class Stack<Item> implements Iterable<Item> {
-	/**
-	 *  size of the stack.
-	 */
+    /**
+     *  size of the stack.
+     */
     private int size;
     /**
      *  top of stack.
@@ -23,9 +23,9 @@ public class Stack<Item> implements Iterable<Item> {
     * helper linked list class.
     */
     private class Node {
-    	/**
-    	 * Item type.
-    	 */
+        /**
+         * Item type.
+         */
         private Item item;
         /**
          * next address.
@@ -106,7 +106,7 @@ public class Stack<Item> implements Iterable<Item> {
      * @return String.
      */
     public String toString() {
-    	StringBuilder s = new StringBuilder();
+        StringBuilder s = new StringBuilder();
         for (Item item : this) {
             s.append(item + " ");
         }
@@ -118,9 +118,10 @@ public class Stack<Item> implements Iterable<Item> {
    /**
      * Return an iterator to the stack that.
      * iterates through the items in LIFO order.
+     * @return Iterator.
      */
     public Iterator<Item> iterator() {
-    	return new ListIterator();
+        return new ListIterator();
     }
     /**
      * List iterator class.
@@ -128,23 +129,23 @@ public class Stack<Item> implements Iterable<Item> {
     // an iterator, doesn't implement
     //remove() since it's optional.
     private class ListIterator implements Iterator<Item> {
-    	/**
-    	 * points to current node.
-    	 * @return Node[description]
-    	 */
+        /**
+         * points to current node.
+         * @return Node[description]
+         */
         private Node current = first;
         /**
-         * has next()
+         * has next().
          * @return bool[description]
          */
         public boolean hasNext() {
-        	return current != null;
+            return current != null;
         }
         /**
          * remove method.
          */
         public void remove() {
-        	throw new UnsupportedOperationException();
+            throw new UnsupportedOperationException();
         }
         /**
          * next method.
@@ -153,7 +154,7 @@ public class Stack<Item> implements Iterable<Item> {
 
         public Item next() {
             if (!hasNext()) {
-            	throw new NoSuchElementException();
+                throw new NoSuchElementException();
             }
             Item item = current.item;
             current = current.next;
