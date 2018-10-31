@@ -1,33 +1,7 @@
-/*************************************************************************
- *  Compilation:  javac Stack.java
- *  Execution:    java Stack < input.txt
- *
- *  A generic stack, implemented using a linked list. Each stack
- *  element is of type Item.
- *
- *  % more tobe.txt
- *  to be or not to - be - - that - - - is
- *
- *  % java Stack < tobe.txt
- *  to be not that or be (2 left on stack)
- *
- *************************************************************************/
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-
-/**
- *  The <tt>Stack</tt> class represents a last-in-first-out (LIFO) stack of generic items.
- *  It supports the usual <em>push</em> and <em>pop</em> operations, along with methods
- *  for peeking at the top item, testing if the stack is empty, and iterating through
- *  the items in LIFO order.
- *  <p>
- *  All stack operations except iteration are constant time.
- *  <p>
- *  For additional documentation, see <a href="/algs4/13stacks">Section 1.3</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- */
 public class Stack<Item> implements Iterable<Item> {
     private int N;          // size of the stack
     private Node first;     // top of stack
@@ -72,8 +46,10 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
    /**
-     * Delete and return the item most recently added to the stack.
-     * Throw an exception if no such item exists because the stack is empty.
+     * Delete and return the
+     * item most recently added to the stack.
+     * Throw an exception if no such item
+     * exists because the stack is empty.
      */
     public Item pop() {
         if (isEmpty()) throw new RuntimeException("Stack underflow");
@@ -85,8 +61,10 @@ public class Stack<Item> implements Iterable<Item> {
 
 
    /**
-     * Return the item most recently added to the stack.
-     * Throw an exception if no such item exists because the stack is empty.
+     * Return the item most recently
+     * added to the stack.
+     * Throw an exception if no such
+     * item exists because the stack is empty.
      */
     public Item peek() {
         if (isEmpty()) throw new RuntimeException("Stack underflow");
@@ -105,7 +83,8 @@ public class Stack<Item> implements Iterable<Item> {
 
 
    /**
-     * Return an iterator to the stack that iterates through the items in LIFO order.
+     * Return an iterator to the stack that
+     * iterates through the items in LIFO order.
      */
     public Iterator<Item> iterator()  { return new ListIterator();  }
 
