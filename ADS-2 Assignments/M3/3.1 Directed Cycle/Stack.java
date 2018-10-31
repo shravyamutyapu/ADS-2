@@ -1,14 +1,32 @@
-
+/**
+ * import iterator.
+ */
 import java.util.Iterator;
+/**
+ * no such ele exception.
+ */
 import java.util.NoSuchElementException;
-
+/**
+ *stack class.
+ */
 public class Stack<Item> implements Iterable<Item> {
-    private int N;          // size of the stack
-    private Node first;     // top of stack
-
+	/**
+	 *  size of the stack.
+	 */
+    private int size;
+    /**
+     *  top of stack.
+     */
+    private Node first;
     // helper linked list class
     private class Node {
+    	/**
+    	 * Item type.
+    	 */
         private Item item;
+        /**
+         * next address.
+         */
         private Node next;
     }
 
@@ -17,7 +35,7 @@ public class Stack<Item> implements Iterable<Item> {
      */
     public Stack() {
         first = null;
-        N = 0;
+        size = 0;
     }
 
    /**
@@ -31,7 +49,7 @@ public class Stack<Item> implements Iterable<Item> {
      * Return the number of items in the stack.
      */
     public int size() {
-        return N;
+        return size;
     }
 
    /**
@@ -42,7 +60,7 @@ public class Stack<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        size++;
     }
 
    /**
@@ -52,10 +70,12 @@ public class Stack<Item> implements Iterable<Item> {
      * exists because the stack is empty.
      */
     public Item pop() {
-        if (isEmpty()) throw new RuntimeException("Stack underflow");
+        if (isEmpty()){
+       throw new RuntimeException("Stack underflow");
+        }
         Item item = first.item;        // save item to return
         first = first.next;            // delete first node
-        N--;
+        size--;
         return item;                   // return the saved item
     }
 
@@ -67,7 +87,9 @@ public class Stack<Item> implements Iterable<Item> {
      * item exists because the stack is empty.
      */
     public Item peek() {
-        if (isEmpty()) throw new RuntimeException("Stack underflow");
+        if (isEmpty()){
+        throw new RuntimeException("Stack underflow");
+        }
         return first.item;
     }
 
@@ -86,16 +108,24 @@ public class Stack<Item> implements Iterable<Item> {
      * Return an iterator to the stack that
      * iterates through the items in LIFO order.
      */
-    public Iterator<Item> iterator()  { return new ListIterator();  }
+    public Iterator<Item> iterator() {
+    	return new ListIterator();
+    }
 
     // an iterator, doesn't implement remove() since it's optional
     private class ListIterator implements Iterator<Item> {
         private Node current = first;
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
+        public boolean hasNext() {
+        	return current != null;
+        }
+        public void remove() {
+        	throw new UnsupportedOperationException();
+        }
 
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+            	throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next;
             return item;
