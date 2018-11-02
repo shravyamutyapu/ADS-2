@@ -194,9 +194,8 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
         String input = sc.nextLine();
         try {
             WordNet obj = new WordNet(file1, file2);
-            boolean f = obj.isflag();
             if (input.equals("Graph")) {
-                if (f == false) {
+                if (!obj.isflag()) {
                     obj.print();
                 }
             } else if (input.equals("Queries")) {
@@ -205,7 +204,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
                     String str = obj.sap(tokens[0], tokens[1]);
                     int dis = obj.distance(tokens[0], tokens[1]);
                     System.out.println("distance = " + dis
-                        +", ancestor = " + str);
+                        + ", ancestor = " + str);
 
                 }
             }

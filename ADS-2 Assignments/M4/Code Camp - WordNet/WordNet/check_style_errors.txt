@@ -1,6 +1,4 @@
 Starting audit...
 [ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:199:23: Expression can be simplified. [SimplifyBooleanExpression]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:208:26: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
