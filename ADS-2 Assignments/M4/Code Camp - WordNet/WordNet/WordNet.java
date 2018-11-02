@@ -12,7 +12,7 @@ import java.io.File;
  */
 public class WordNet {
     /**
-     * digraph g
+     * digraph g.
      */
     private Digraph g;
     /**
@@ -24,16 +24,24 @@ public class WordNet {
      */
     private LinearProbingHashST<Integer, String> ht1;
 
-    int v;
+    private int v;
     /**
      * SAP.
      */
-    SAP sap;
+    private SAP sap;
     /**
      * flag of bool.
      */
-    boolean flag = false;
-    // constructor takes the name of the two input files
+    private boolean flag = false;
+    /**
+     * constructor takes the name of.
+     * the two input files.
+     * @param synsets [description]
+     * @param hypernyms [description]
+     * @throws Exception.
+     * @return [description]
+     */
+    //
     public WordNet(String synsets, String hypernyms) throws Exception {
         buildht(synsets);
         buildg(hypernyms);
@@ -49,7 +57,8 @@ public class WordNet {
             String[] tokens = sc.nextLine().split(",");
             if (tokens.length > 1) {
                 for (int i = 1; i < tokens.length; i++) {
-                    g.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[i]));
+                    g.addEdge(Integer.parseInt(tokens[0]),
+                        Integer.parseInt(tokens[i]));
                 }
             }
         }
@@ -65,10 +74,10 @@ public class WordNet {
     }
     /**
      * checks for cycles.
-     * @param g [description]
+     * @param g1 [description]
      */
-    private void iscycle(Digraph g) {
-        DirectedCycle obj = new DirectedCycle(g);
+    private void iscycle(final Digraph g1) {
+        DirectedCycle obj = new DirectedCycle(g1);
         if (obj.hasCycle()) {
             System.out.println("Cycle detected");
             flag = true ;
@@ -77,12 +86,12 @@ public class WordNet {
     }
     /**
      * rooted digraph check.
-     * @param g [description]
+     * @param g2 [description]
      */
-    private void isrooteddigraph(Digraph g) {
+    private void isrooteddigraph(final Digraph g2) {
         int count = 0;
-        for (int i = 0; i < g.V(); i++) {
-            if (g.outdegree(i) == 0) {
+        for (int i = 0; i < g.V() ; i++) {
+            if (g2.outdegree(i) == 0) {
                 count++;
             }
             if (count > 1) {
@@ -95,8 +104,9 @@ public class WordNet {
     /**
      * build hash table.
      * @param synsets [description]
+     * @throws Exception.
      */
-    private void buildht(String synsets)throws Exception {
+    private void buildht(final String synsets)throws Exception {
         ht = new LinearProbingHashST<String, ArrayList<Integer>>();
         ht1 = new LinearProbingHashST<Integer, String>();
         Scanner sc = new Scanner(new File(synsets));
@@ -121,14 +131,14 @@ public class WordNet {
     }
 
     /**
-     *  returns all WordNet nouns
+     *  returns all WordNet nouns.
      * @return [description]
      */
     public Iterable<String> nouns() {
         return null;
     }
     /**
-     * // is the word a WordNet noun?
+     * // is the word a WordNet noun?.
      * @param word [description]
      * @return [description]
      */
