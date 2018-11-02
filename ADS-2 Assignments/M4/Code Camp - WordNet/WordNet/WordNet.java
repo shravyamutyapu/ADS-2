@@ -18,12 +18,14 @@ public class WordNet {
     /**
      * hash ST ht.
      */
-    private LinearProbingHashST<String, ArrayList<Integer>> ht;
+private LinearProbingHashST<String, ArrayList<Integer>> ht;
     /**
      * hash ST ht.
      */
     private LinearProbingHashST<Integer, String> ht1;
-
+    /**
+     * v variable.
+     */
     private int v;
     /**
      * SAP.
@@ -34,23 +36,19 @@ public class WordNet {
      */
     private boolean flag = false;
     /**
-     * constructor takes the name of.
-     * the two input files.
-     * @param synsets [description]
-     * @param hypernyms [description]
-     * @throws Exception.
-     * @return [description]
+     * constructor.
+     * @throws Exception if null.
      */
-    //
-    public WordNet(String synsets, String hypernyms) throws Exception {
+    public WordNet(final String synsets, final String hypernyms) throws Exception {
         buildht(synsets);
         buildg(hypernyms);
     }
     /**
      * building graph.
      * @param hypernyms [description]
+     * @throws Exception if null.
      */
-    private void buildg(String hypernyms)throws Exception {
+    private void buildg(final String hypernyms)throws Exception {
         g = new Digraph(v);
         Scanner sc = new Scanner(new File(hypernyms));
         while (sc.hasNextLine()) {
@@ -80,7 +78,7 @@ public class WordNet {
         DirectedCycle obj = new DirectedCycle(g1);
         if (obj.hasCycle()) {
             System.out.println("Cycle detected");
-            flag = true ;
+            flag = true;
             return;
         }
     }
@@ -96,7 +94,7 @@ public class WordNet {
             }
             if (count > 1) {
                 System.out.println("Multiple roots");
-                flag = true ;
+                flag = true;
                 return;
             }
         }
@@ -104,7 +102,7 @@ public class WordNet {
     /**
      * build hash table.
      * @param synsets [description]
-     * @throws Exception.
+     * @throws Exception if null.
      */
     private void buildht(final String synsets)throws Exception {
         ht = new LinearProbingHashST<String, ArrayList<Integer>>();
@@ -142,17 +140,17 @@ public class WordNet {
      * @param word [description]
      * @return [description]
      */
-    public boolean isNoun(String word) {
+    public boolean isNoun(final String word) {
         return false;
     }
     /**
      * distance between nounA and nounB (defined below).
-     * @param below [description]
+     * @param nounA [description]
      * @param nounB [description]
      *
      * @return int [description]
      */
-    public int distance(String nounA, String nounB) {
+    public int distance(final String nounA, final String nounB) {
         sap = new SAP(g);
         int dist = sap.length(ht.get(nounA), ht.get(nounB));
         return dist;
@@ -163,11 +161,12 @@ public class WordNet {
      * a synset (second field of synsets.txt)
      * that is the common ancestor of nounA and nounB
      * in a shortest ancestral path (defined below)
-     * @param field [description]
-     * @return [description]
+     * @param nounA [description]
+     * @param nounB [description]
+     * @return String[description]
      */
 
-    public String sap(String nounA, String nounB) {
+    public String sap(final String nounA, final String nounB) {
         sap = new SAP(g);
         String str = "";
         int id = sap.ancestor(ht.get(nounA), ht.get(nounB));
@@ -181,25 +180,29 @@ public class WordNet {
         System.out.println(g);
     }
     /**
-     * do unit testing of this class
+     * do unit testing of this class.
      * @param args [description]
      */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String file1 = "Files" + "\\" + sc.nextLine();
         String file2 = "Files" + "\\" + sc.nextLine();
         String input = sc.nextLine();
         try {
             WordNet obj = new WordNet(file1, file2);
+            boolean f = obj.isflag();
             if (input.equals("Graph")) {
-                if (obj.isflag() == false) obj.print();
+                if ( f == false) {
+                    obj.print();
+                }
             } else if (input.equals("Queries")) {
                 while (sc.hasNextLine()) {
                     String[] tokens = sc.nextLine().split(" ");
                     String str = obj.sap(tokens[0], tokens[1]);
                     int dis = obj.distance(tokens[0], tokens[1]);
-                    System.out.println("distance = " + dis + ", ancestor = " + str);
+                    System.out.println("distance = " + dis +
+                        ", ancestor = " + str);
                 }
             }
         } catch (Exception e) {
