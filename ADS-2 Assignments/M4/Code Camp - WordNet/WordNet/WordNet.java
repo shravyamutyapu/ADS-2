@@ -37,9 +37,12 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     private boolean flag = false;
     /**
      * constructor.
+     * @param synsets synsets.
+     * @param hypernyms hypernyms.
      * @throws Exception if null.
      */
-    public WordNet(final String synsets, final String hypernyms) throws Exception {
+    public WordNet(final String synsets, final String hypernyms)
+    throws Exception {
         buildht(synsets);
         buildg(hypernyms);
     }
@@ -88,7 +91,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
      */
     private void isrooteddigraph(final Digraph g2) {
         int count = 0;
-        for (int i = 0; i < g.V() ; i++) {
+        for (int i = 0; i < g.V(); i++) {
             if (g2.outdegree(i) == 0) {
                 count++;
             }
@@ -193,7 +196,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
             WordNet obj = new WordNet(file1, file2);
             boolean f = obj.isflag();
             if (input.equals("Graph")) {
-                if ( f == false) {
+                if (f == false) {
                     obj.print();
                 }
             } else if (input.equals("Queries")) {
@@ -201,12 +204,13 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
                     String[] tokens = sc.nextLine().split(" ");
                     String str = obj.sap(tokens[0], tokens[1]);
                     int dis = obj.distance(tokens[0], tokens[1]);
-                    System.out.println("distance = " + dis +
-                        ", ancestor = " + str);
+                    System.out.println("distance = " + dis
+                        +", ancestor = " + str);
+
                 }
             }
         } catch (Exception e) {
-            System.out.println("IllegalArgumentException");;
+            System.out.println("IllegalArgumentException");
         }
 
     }
