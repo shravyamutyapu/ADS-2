@@ -1,18 +1,47 @@
-import java.util.*;
-import java.io.*;
+/**
+ * importing scanner.
+ */
+import java.util.Scanner;
+/**
+ * importing array list.
+ */
+import java.util.ArrayList;
+import java.io.File;
+/**
+ * WordNet class.
+ */
 public class WordNet {
-    Digraph g;
-    LinearProbingHashST<String, ArrayList<Integer>> ht;
-     LinearProbingHashST<Integer, String> ht1;
+    /**
+     * digraph g
+     */
+    private Digraph g;
+    /**
+     * hash ST ht.
+     */
+    private LinearProbingHashST<String, ArrayList<Integer>> ht;
+    /**
+     * hash ST ht.
+     */
+    private LinearProbingHashST<Integer, String> ht1;
+
     int v;
+    /**
+     * SAP.
+     */
     SAP sap;
+    /**
+     * flag of bool.
+     */
     boolean flag = false;
     // constructor takes the name of the two input files
     public WordNet(String synsets, String hypernyms) throws Exception{
         buildht(synsets);
         buildg(hypernyms);
     }
-
+    /**
+     * building graph.
+     * @param hypernyms [description]
+     */
     private void buildg(String hypernyms)throws Exception{
         g = new Digraph(v);
         Scanner sc = new Scanner(new File(hypernyms));
@@ -27,9 +56,17 @@ public class WordNet {
         isrooteddigraph(g);
         iscycle(g);
     }
+    /**
+     * flag check.
+     * @return bool[description]
+     */
     private boolean isflag(){
         return flag;
     }
+    /**
+     * checks for cycles.
+     * @param g [description]
+     */
     private void iscycle(Digraph g){
         DirectedCycle obj = new DirectedCycle(g);
         if(obj.hasCycle()){
@@ -38,6 +75,10 @@ public class WordNet {
             return;
         }
     }
+    /**
+     * rooted digraph check.
+     * @param g [description]
+     */
     private void isrooteddigraph(Digraph g){
         int count = 0;
         for(int i = 0; i < g.V(); i++){
@@ -51,7 +92,10 @@ public class WordNet {
             }
         }
     }
-
+    /**
+     * build hash table.
+     * @param synsets [description]
+     */
     private void buildht(String synsets)throws Exception{
         ht = new LinearProbingHashST<String, ArrayList<Integer>>();
         ht1 = new LinearProbingHashST<Integer, String>();
@@ -76,37 +120,61 @@ public class WordNet {
         }
     }
 
-    // returns all WordNet nouns
+    /**
+     *  returns all WordNet nouns
+     * @return [description]
+     */
     public Iterable<String> nouns(){
         return null;
     }
-
-    // is the word a WordNet noun?
+    /**
+     * // is the word a WordNet noun?
+     * @param word [description]
+     * @return [description]
+     */
     public boolean isNoun(String word){
         return false;
     }
-
-    // distance between nounA and nounB (defined below)
+    /**
+     * distance between nounA and nounB (defined below).
+     * @param below [description]
+     * @param nounB [description]
+     *
+     * @return int [description]
+     */
     public int distance(String nounA, String nounB){
         sap = new SAP(g);
         int dist = sap.length(ht.get(nounA), ht.get(nounB));
         return dist;
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * a synset (second field of synsets.txt)
+     * that is the common ancestor of nounA and nounB
+     * in a shortest ancestral path (defined below)
+     * @param field [description]
+     * @return [description]
+     */
 
-    // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
-    // in a shortest ancestral path (defined below)
     public String sap(String nounA, String nounB){
          sap = new SAP(g);
         String str = "";
         int id = sap.ancestor(ht.get(nounA), ht.get(nounB));
         return ht1.get(id);
     }
+    /**
+     * prints.
+     */
 
     public void print(){
         System.out.println(g);
     }
+    /**
+     * do unit testing of this class
+     * @param args [description]
+     */
 
-    // do unit testing of this class
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String file1 = "Files"+"\\" + sc.nextLine();
