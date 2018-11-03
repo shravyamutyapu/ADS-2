@@ -42,7 +42,8 @@ import java.util.regex.Pattern;
  *  = "https://introcs.cs.princeton.edu/java/stdlib/StdIn.java">StdIn.java</a>
  *  and put a copy in your working directory.
  *  <p>
- *  <b>Reading tokens from standard input and converting to numbers and strings.</b>
+ *  <b>Reading tokens from standard input and converting
+ *  to numbers and strings.</b>
  *  You can use the following methods to read numbers, strings, and booleans
  *  from standard input one at a time:
  *  <ul>
@@ -73,7 +74,8 @@ import java.util.regex.Pattern;
  *  from those in {@link Double#valueOf(String)},
  *  but unlikely to be of concern to most programmers.
  *  <p>
- *  As an example, the following code fragment reads integers from standard input,
+ *  As an example, the following code fragment reads
+ *  integers from standard input,
  *  one at a time, and prints them one per line.
  *  <pre>
  *  while (!StdIn.isEmpty()) {
@@ -90,11 +92,13 @@ import java.util.regex.Pattern;
  *  <li> {@link #readChar()}
  *  </ul>
  *  <p>
- *  The first method returns true if standard input has more input (including whitespace).
+ *  The first method returns true if standard input has more input
+ *  (including whitespace).
  *  The second method reads and returns the next character of input on standard
  *  input (possibly a whitespace character).
  *  <p>
- *  As an example, the following code fragment reads characters from standard input,
+ *  As an example, the following code fragment reads characters from
+ *  standard input,
  *  one character at a time, and prints it to standard output.
  *  <pre>
  *  while (StdIn.hasNextChar()) {
@@ -174,7 +178,8 @@ import java.util.regex.Pattern;
  *  <li> {@code StdIn} coerces the character-set encoding to UTF-8,
  *       which is the most widely used character encoding for Unicode.
  *  <li> {@code StdIn} coerces the locale to {@link Locale#US},
- *       for consistency with {@link StdOut}, {@link Double#parseDouble(String)},
+ *       for consistency with {@link StdOut},
+ *       {@link Double#parseDouble(String)},
  *       and floating-point literals.
  *  <li> {@code StdIn} has convenient methods for reading a single
  *       character; reading in sequences of integers, doubles, or strings;
@@ -182,7 +187,8 @@ import java.util.regex.Pattern;
  *  </ul>
  *  <p>
  *  Historical note: {@code StdIn} preceded {@code Scanner}; when
- *  {@code Scanner} was introduced, this class was re-implemented to use {@code Scanner}.
+ *  {@code Scanner} was introduced, this class was re-implemented
+ *  to use {@code Scanner}.
  *  <p>
  *  <b>Using standard input.</b>
  *  Standard input is a fundamental operating system abstraction on Mac OS X,
@@ -198,7 +204,8 @@ import java.util.regex.Pattern;
  *  <p>
  *  <b>Known bugs.</b>
  *  Java's UTF-8 encoding does not recognize the optional
- *  <a href = "http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4508058">byte-order mask</a>.
+ *  <a href = "http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4508058">
+ *  byte-order mask</a>.
  *  If the input begins with the optional byte-order mask, {@code StdIn}
  *  will have an extra character {@code \}{@code uFEFF} at the beginning.
  *  <p>
@@ -216,28 +223,39 @@ public final class StdIn {
 
     /*** begin: section (1 of 2) of code duplicated from In to StdIn. */
 
-    // assume Unicode UTF-8 encoding
+    /**
+     * assume Unicode UTF-8 encoding.
+     */
     private static final String CHARSET_NAME = "UTF-8";
 
-    // assume language = English, country = US for consistency with System.out.
+    /**
+     * assume language = English, country = US for consistency with System.out.
+     */
     private static final Locale LOCALE = Locale.US;
 
-    // the default token separator; we maintain the invariant that this value
-    // is held by the scanner's delimiter between calls
+    /**
+     * the default token separator; we maintain the invariant that this value
+     * is held by the scanner's delimiter between calls
+     */
     private static final Pattern WHITESPACE_PATTERN =
     Pattern.compile("\\p{javaWhitespace}+");
 
-    // makes whitespace significant
+    /**
+     * makes whitespace significant.
+     */
     private static final Pattern EMPTY_PATTERN = Pattern.compile("");
 
-    // used to read the entire input
+    /**
+     * used to read the entire input.
+     */
     private static final Pattern EVERYTHING_PATTERN = Pattern.compile("\\A");
 
     /*** end: section (1 of 2) of code duplicated from In to StdIn. */
 
     private static Scanner scanner;
-
-    // it doesn't make sense to instantiate this class
+    /**
+     * it doesn't make sense to instantiate this class.
+     */
     private StdIn() { }
 
     // begin: section (2 of 2) of code duplicated from In to StdIn,
@@ -321,8 +339,8 @@ public final class StdIn {
         try {
             scanner.useDelimiter(EMPTY_PATTERN);
             String ch = scanner.next();
-            assert ch.length() == 1 :
-            "Internal (Std)In.readChar() error!"
+            assert ch.length() == 1
+            : "Internal (Std)In.readChar() error!"
             + " Please contact the authors.";
             scanner.useDelimiter(WHITESPACE_PATTERN);
             return ch.charAt(0);
@@ -341,8 +359,9 @@ public final class StdIn {
       * @throws NoSuchElementException if standard input is empty
       */
     public static String readAll() {
-        if (!scanner.hasNextLine())
+        if (!scanner.hasNextLine()){
             return "";
+        }
 
         String result = scanner.useDelimiter(EVERYTHING_PATTERN).next();
         // not that important to
@@ -531,10 +550,18 @@ public final class StdIn {
     public static boolean readBoolean() {
         try {
             String token = readString();
-            if ("true".equalsIgnoreCase(token))  return true;
-            if ("false".equalsIgnoreCase(token)) return false;
-            if ("1".equals(token))               return true;
-            if ("0".equals(token))               return false;
+            if ("true".equalsIgnoreCase(token)) {
+                return true;
+            }
+            if ("false".equalsIgnoreCase(token)) {
+                return false;
+            }
+            if ("1".equals(token)) {
+                return true;
+            }
+            if ("0".equals(token)) {
+                return false;
+            }
             throw new InputMismatchException(
                 "attempts to read a 'boolean' value from standard input, "
                         + "but the next token is \"" + token + "\"");
@@ -558,13 +585,15 @@ public final class StdIn {
         //readAll.trim().split(), but that's not consistent
         // because trim() uses characters 0x00..0x20 as whitespace
         String[] tokens = WHITESPACE_PATTERN.split(readAll());
-        if (tokens.length == 0 || tokens[0].length() > 0)
+        if (tokens.length == 0 || tokens[0].length() > 0) {
             return tokens;
+        }
 
         // don't include first token if it is leading whitespace
         String[] decapitokens = new String[tokens.length - 1];
-        for (int i = 0; i < tokens.length - 1; i++)
+        for (int i = 0; i < tokens.length - 1; i++) {
             decapitokens[i] = tokens[i + 1];
+        }
         return decapitokens;
     }
 
@@ -595,8 +624,9 @@ public final class StdIn {
     public static int[] readAllInts() {
         String[] fields = readAllStrings();
         int[] vals = new int[fields.length];
-        for (int i = 0; i < fields.length; i++)
+        for (int i = 0; i < fields.length; i++) {
             vals[i] = Integer.parseInt(fields[i]);
+        }
         return vals;
     }
 
@@ -611,8 +641,9 @@ public final class StdIn {
     public static long[] readAllLongs() {
         String[] fields = readAllStrings();
         long[] vals = new long[fields.length];
-        for (int i = 0; i < fields.length; i++)
+        for (int i = 0; i < fields.length; i++) {
             vals[i] = Long.parseLong(fields[i]);
+        }
         return vals;
     }
 
@@ -627,8 +658,9 @@ public final class StdIn {
     public static double[] readAllDoubles() {
         String[] fields = readAllStrings();
         double[] vals = new double[fields.length];
-        for (int i = 0; i < fields.length; i++)
+        for (int i = 0; i < fields.length; i++) {
             vals[i] = Double.parseDouble(fields[i]);
+        }
         return vals;
     }
 
@@ -648,7 +680,7 @@ public final class StdIn {
     }
     /**
      * setting Scanner.
-     * @param Scanner [description]
+     * @param scanner1 [description]
      */
     private static void setScanner(final Scanner scanner1) {
         StdIn.scanner = scanner1;
