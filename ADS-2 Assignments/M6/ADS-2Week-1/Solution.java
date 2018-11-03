@@ -10,6 +10,14 @@ class PageRank {
    	pageRankvals = new double[vt];
    	outCount = new int[vt];
    }
+   public void pageVals(String[] in) {
+
+        for(int i = 0; i<vertex; i++) {
+        	outCount[i] = dg.outdegree(i);
+        	pageRankvals[i] = 1.0/4;
+
+        }
+    }
 }
 
 class WebSearch {
