@@ -30,7 +30,7 @@ public class Solution {
           String[] tokens = sc.nextLine().split(" ");
           int key = Integer.parseInt(tokens[0]);
           for(int j = 1; j<tokens.length; j++) {
-                digraph.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[i]));
+                digraph.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
 
          }
 
