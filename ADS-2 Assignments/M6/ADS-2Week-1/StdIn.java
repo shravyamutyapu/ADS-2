@@ -24,7 +24,8 @@ import java.util.regex.Pattern;
  *      and converting each to a number, string, or boolean
  *  <li>those for reading characters from standard input, one at a time
  *  <li>those for reading lines from standard input, one at a time
- *  <li>those for reading a sequence of values of the same type from standard input,
+ *  <li>those for reading a sequence of values of the same type
+ *  from standard input,
  *      and returning the values in an array
  *  </ul>
  *  <p>
@@ -234,7 +235,8 @@ public final class StdIn {
     private static final Locale LOCALE = Locale.US;
 
     /**
-     * the default token separator; we maintain the invariant that this value
+     * the default token separator; we maintain the invariant.
+     * that this value
      * is held by the scanner's delimiter between calls
      */
     private static final Pattern WHITESPACE_PATTERN =
@@ -359,7 +361,7 @@ public final class StdIn {
       * @throws NoSuchElementException if standard input is empty
       */
     public static String readAll() {
-        if (!scanner.hasNextLine()){
+        if (!scanner.hasNextLine()) {
             return "";
         }
 
@@ -723,3 +725,5 @@ public final class StdIn {
         return readAllStrings();
     }
 }
+
+

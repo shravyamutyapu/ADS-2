@@ -1,7 +1,2 @@
 Starting audit...
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M6\ADS-2Week-1\StdIn.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M6\ADS-2Week-1\StdIn.java:27: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M6\ADS-2Week-1\StdIn.java:236: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M6\ADS-2Week-1\StdIn.java:362:36: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 4 errors.
