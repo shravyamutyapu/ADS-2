@@ -59,11 +59,11 @@ public final class Solution {
                     System.out.println("No edges");
                     break;
                 }
-                String vtxes = sc.nextLine();
-                String[] tkens = vtxes.split(",");
+                String vt = sc.nextLine();
+                String[] tokens3 = vt.split(",");
                 GraphList object = new GraphList(vertexCount);
                 for (int i = 0; i < vertexCount; i++) {
-                    object.addVertex(tkens[i]);
+                    object.addVertex(tokens3[i]);
                 }
                 String line;
                 String[] tokens = new String[edgeCount];

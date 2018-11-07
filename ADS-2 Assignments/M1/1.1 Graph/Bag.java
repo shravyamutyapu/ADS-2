@@ -56,6 +56,7 @@ public class Bag<Item> implements Iterable<Item> {
 
     /**
       * Add the item to the bag.
+      * @param item item.
       */
     public void add(final Item item) {
         Node oldfirst = first;
@@ -91,9 +92,16 @@ public class Bag<Item> implements Iterable<Item> {
         public boolean hasNext() {
             return current != null;
         }
+        /**
+         * removes.
+         */
         public void remove() {
             throw new UnsupportedOperationException();
         }
+        /**
+         * next item.
+         * @return description
+         */
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;

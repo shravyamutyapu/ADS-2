@@ -55,7 +55,7 @@ public class GraphMatrix {
     /**.
      * Constructs the object.
      *
-     * @param      vt     { parameter_description }
+     * @param vt vertices.
      */
     public GraphMatrix(final int vt) {
         this.ver = vt;
@@ -73,9 +73,9 @@ public class GraphMatrix {
         return ver;
     }
     /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
+     * .
+     * time complexity is 1.
+     * @return int.
      */
     public int edge() {
         return edg;
@@ -83,17 +83,16 @@ public class GraphMatrix {
     /**.
      * Adds a vertex.
      *
-     * @param      v     { parameter_description }
+     * @param v adding vertex.
      */
     public void addVertex(final String v) {
         vertices[size] = v;
         size++;
     }
     /**
-     * .
-     *
-     * @param      v     { parameter_description }
-     * @param      w     { parameter_description }
+     * time complexity is 1.
+     * @param  v vert.
+     * @param  w w.
      */
     public void addEdge(final int v, final int w) {
         if (v == w) {
@@ -108,19 +107,18 @@ public class GraphMatrix {
         }
     }
     /**.
-     * { function_description }
-     *
-     * @param      v     { parameter_description }
-     * @param      w     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
+     * checks if it contains or not.
+     * time complexity is 1.
+     * @param v v.
+     * @param w w.
+     * @return int.
      */
     public int contains(final int v, final int w) {
         return adj[v][w];
     }
     /**.
      * Returns a string representation of the object.
-     *
+     * time complexity is O(v*2).
      * @return     String representation of the object.
      */
     public String toString() {
