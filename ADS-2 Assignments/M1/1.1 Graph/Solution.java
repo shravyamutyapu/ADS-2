@@ -33,25 +33,25 @@ public final class Solution {
                     System.out.println("No edges");
                     break;
                 }
-                String vtexes = sc.nextLine();
-                String[] tokens1 = vtexes.split(",");
-                GraphList gl = new GraphList(n);
+                String ver1 = sc.nextLine();
+                String[] tokens1 = ver1.split(",");
+                GraphList graphlist = new GraphList(n);
                 for (int i = 0; i < n; i++) {
-                    gl.addVertex(tokens1[i]);
+                    graphlist.addVertex(tokens1[i]);
                 }
                 String line1;
                 String[] tokens2 = new String[m];
                 for (int i = 0; i < m; i++) {
                     line1 = sc.nextLine();
                     tokens2 = line1.split(" ");
-                        gl.addEdge(Integer.parseInt(tokens2[0]),
+                        graphlist.addEdge(Integer.parseInt(tokens2[0]),
                          Integer.parseInt(tokens2[1]));
                 }
                 if (Integer.parseInt(tokens2[0])
                  == Integer.parseInt(tokens2[1])) {
                     break;
                 } else {
-                    System.out.println(gl.toString());
+                    System.out.println(graphlist.toString());
                 }
                 break;
             case"Matrix":
@@ -61,24 +61,24 @@ public final class Solution {
                     break;
                 }
                 String vtxes = sc.nextLine();
-                String[] tkens = vtxes.split(",");
-                GraphMatrix gm = new GraphMatrix(n);
+                String[] tokens3 = vtxes.split(",");
+                GraphMatrix graphmat = new GraphMatrix(n);
                 for (int i = 0; i < n; i++) {
-                    gm.addVertex(tkens[i]);
+                    graphmat.addVertex(tokens3[i]);
                 }
                 String line;
                 String[] tokens = new String[m];
                 for (int i = 0; i < m; i++) {
                     line = sc.nextLine();
                     tokens = line.split(" ");
-                    gm.addEdge(Integer.parseInt(tokens[0]),
+                    graphmat.addEdge(Integer.parseInt(tokens[0]),
                      Integer.parseInt(tokens[1]));
                 }
                 if (Integer.parseInt(tokens[0])
                  == Integer.parseInt(tokens[1])) {
                     break;
                 } else {
-                    System.out.println(gm.toString());
+                    System.out.println(graphmat.toString());
                 }
                 break;
             default:
