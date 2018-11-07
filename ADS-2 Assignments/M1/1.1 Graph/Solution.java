@@ -32,8 +32,8 @@ public final class Solution {
                     System.out.println("No edges");
                     break;
                 }
-                String vert = sc.nextLine();
-                String[] tokens1 = vert.split(",");
+                String vert1 = sc.nextLine();
+                String[] tokens1 = vert1.split(",");
                 GraphList obj1 = new GraphList(vertexCount);
                 for (int i = 0; i < vertexCount; i++) {
                     obj1.addVertex(tokens1[i]);
