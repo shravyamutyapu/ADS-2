@@ -7,12 +7,25 @@ import java.util.NoSuchElementException;
  * stack class of type int.
  */
 public class Stack<Item> implements Iterable<Item> {
-    private Node<Item> first;     // top of stack
-    private int n;                // size of the stack
+    /**
+     * first.
+     */
+    private Node<Item> first;
+    // top of stack
+    /**
+     * size.
+     */
+    private int n;
 
     // helper linked list class
     private static class Node<Item> {
+        /**
+         * private item.
+         */
         private Item item;
+        /**
+         * private next.
+         */
         private Node<Item> next;
     }
 
@@ -62,7 +75,9 @@ public class Stack<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this stack is empty
      */
     public Item pop() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Stack underflow");
+        }
         Item item = first.item;        // save item to return
         first = first.next;            // delete first node
         n--;
@@ -71,7 +86,8 @@ public class Stack<Item> implements Iterable<Item> {
 
 
     /**
-     * Returns (but does not remove) the item most recently added to this stack.
+     * Returns (but does not remove)
+     * the item most recently added to this stack.
      *
      * @return the item most recently added to this stack
      * @throws NoSuchElementException if this stack is empty
@@ -84,7 +100,8 @@ public class Stack<Item> implements Iterable<Item> {
     /**
      * Returns a string representation of this stack.
      *
-     * @return the sequence of items in this stack in LIFO order, separated by spaces
+     * @return the sequence of items in this
+     * stack in LIFO order, separated by spaces
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -97,32 +114,52 @@ public class Stack<Item> implements Iterable<Item> {
 
 
     /**
-     * Returns an iterator to this stack that iterates through the items in LIFO order.
-     *
-     * @return an iterator to this stack that iterates through the items in LIFO order
+     * Returns an iterator to this stack that iterates.
+     * through the items in LIFO order
+     * @return an iterator to this stack that
+     * iterates through the items in LIFO order
      */
     public Iterator<Item> iterator() {
         return new ListIterator<Item>(first);
     }
-
-    // an iterator, doesn't implement remove() since it's optional
+    /**
+     * an iterator, doesn't.
+     * implement remove() since it's optional
+     * class.
+     */
     private class ListIterator<Item> implements Iterator<Item> {
+        /**
+         * private item.
+         */
         private Node<Item> current;
-
-        public ListIterator(Node<Item> first) {
-            current = first;
+        /**
+         * constructor.
+         */
+        public ListIterator(final Node<Item> first1) {
+            current = first1;
         }
-
+        /**
+         * checks if next is there or not.
+         * @return bool [description]
+         */
         public boolean hasNext() {
             return current != null;
         }
-
+        /**
+         * remove method.
+         */
         public void remove() {
             throw new UnsupportedOperationException();
         }
+        /**
+         * next method.
+         * @return item [description]
+         */
 
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next;
             return item;
