@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 /**
  * stack class of type int.
+ * @param <Item> item.
  */
 public class Stack<Item> implements Iterable<Item> {
     /**
@@ -18,6 +19,9 @@ public class Stack<Item> implements Iterable<Item> {
     private int n;
 
     // helper linked list class
+    /**
+     * class node.
+     */
     private static class Node<Item> {
         /**
          * private item.
@@ -60,7 +64,7 @@ public class Stack<Item> implements Iterable<Item> {
      *
      * @param  item the item to add
      */
-    public void push(Item item) {
+    public void push(final Item item) {
         Node<Item> oldfirst = first;
         first = new Node<Item>();
         first.item = item;
@@ -93,7 +97,9 @@ public class Stack<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this stack is empty
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) {
+    throw new NoSuchElementException("Stack underflow");
+        }
         return first.item;
     }
 
@@ -126,6 +132,7 @@ public class Stack<Item> implements Iterable<Item> {
      * an iterator, doesn't.
      * implement remove() since it's optional
      * class.
+     * @param <Item> item.
      */
     private class ListIterator<Item> implements Iterator<Item> {
         /**
@@ -134,8 +141,9 @@ public class Stack<Item> implements Iterable<Item> {
         private Node<Item> current;
         /**
          * constructor.
+         * @param first1.
          */
-        public ListIterator(final Node<Item> first1) {
+        ListIterator(final Node<Item> first1) {
             current = first1;
         }
         /**
@@ -166,3 +174,7 @@ public class Stack<Item> implements Iterable<Item> {
         }
     }
 }
+
+
+
+

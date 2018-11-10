@@ -1,11 +1,5 @@
 Starting audit...
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:9: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:21: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:63:22: Parameter item should be final. [FinalParameters]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:96: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:130: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:138:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:138:46: Expected @param tag for 'first1'. [JavadocMethod]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:25: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:146:39: Expected @param tag for 'first1'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 2 errors.
