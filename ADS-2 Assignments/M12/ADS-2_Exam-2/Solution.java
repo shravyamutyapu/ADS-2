@@ -26,15 +26,21 @@ public class Solution {
 
 		case "DirectedPaths":
 			// Handle the case of DirectedPaths, where two integers are given.
-			// First is the source and second is the destination.
+			// First is the source and second is the path[1].
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+		    String[] path = sc.nextLine().split(" ");
+			DijkstraUndirectedSP pathObj = new DijkstraUndirectedSP(graphObj, Integer.parseInt(path[0]));
+			if(pathObj.hasPathTo(Integer.parseInt(path[1]))) {
+				System.out.println(pathObj.distTo(Integer.parseInt(path[1])));
+			}
+
 			break;
 
 		case "ViaPaths":
 			// Handle the case of ViaPaths, where three integers are given.
 			// First is the source and second is the via is the one where path should pass throuh.
-			// third is the destination.
+			// third is the path[1].
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
 			break;

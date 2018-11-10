@@ -69,6 +69,10 @@ class EdgeWeightedGraph {
         // validateVertex(v);
         return adj[v];
     }
+    /**
+     * toString method.
+     * @return String[description]
+     */
     public String toString(){
         String s="";
         System.out.println(ver+" vertices"+" "+edg +" edges");
