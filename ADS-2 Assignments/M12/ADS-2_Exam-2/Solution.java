@@ -61,10 +61,11 @@ public class Solution {
 					System.out.println(dist);
 			}
 
-		   }
+
 			else {
 				System.out.println("No Path Found.");
 			}
+		}
 
 			break;
 
