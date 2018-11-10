@@ -1,0 +1,12 @@
+Starting audit...
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:4:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:4:33: Parameter args should be final. [FinalParameters]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:27: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:34: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Solution.java:35: Line is longer than 80 characters (found 110). [LineLength]
+Audit done.
+Checkstyle ends with 9 errors.
