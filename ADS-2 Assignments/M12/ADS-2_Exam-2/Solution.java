@@ -63,15 +63,30 @@ public class Solution {
 					dist += viaObj.distTo(destiny1);
 					System.out.println(dist);
 
-				// 	ArrayList<Integer> arraylist = new ArrayList<Integer>();
+				ArrayList<Integer> arraylist = new ArrayList<Integer>();
 					String srcvia = path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1);
-					System.out.println(srcvia);
-				// 	String[] temp = srcvia.split("-");
-				// 	String[] val = temp[1].split(" ");
-				// 	arraylist.add(Integer.parseInt(val[0]));
-				// 	arraylist.add(Integer.parseInt(temp[0]));
+					//System.out.println(srcvia);
+				 	String[] temp = srcvia.split(" ");
+				 	String[] temp1 = temp[0].split("-");
+				 	String[] temp2 = temp[2].split("-");
+				 	String[] temp3 = temp[4].split("-");
+				 	String[] temp4 = temp[6].split("-");
+				 	String[] temp5 = temp[8].split("-");
 
-				// System.out.println(arraylist);
+				// 	String[] val = temp[1].split(" ");
+				 	arraylist.add(Integer.parseInt(temp1[1]));
+					arraylist.add(Integer.parseInt(temp1[0]));
+					arraylist.add(Integer.parseInt(temp3[1]));
+					arraylist.add(Integer.parseInt(temp3[0]));
+					arraylist.add(Integer.parseInt(temp5[1]));
+					arraylist.add(Integer.parseInt(temp5[0]));
+
+
+
+
+
+
+				System.out.println(arraylist);
 
 
 
