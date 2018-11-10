@@ -14,13 +14,14 @@ public class Solution {
             String way = sc.nextLine();
             String[] tokens = way.split(" ");
             graphObj.addEdge(new Edge(Integer.parseInt(tokens[0]),
-             Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2])));
+             Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2])));
         }
 
 		String caseToGo = sc.nextLine();
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
+		    System.out.println(graphObj);
 			break;
 
 		case "DirectedPaths":
