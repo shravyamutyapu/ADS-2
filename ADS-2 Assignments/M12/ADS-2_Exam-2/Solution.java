@@ -65,12 +65,11 @@ public class Solution {
 
 					ArrayList<Integer> arraylist = new ArrayList<Integer>();
 					String srcvia = path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1);
-					for(int i=0;i<3;i++){
 					String[] temp = srcvia.split("-");
 					String[] val = temp[1].split(" ");
 					arraylist.add(Integer.parseInt(val[0]));
 					arraylist.add(Integer.parseInt(temp[0]));
-				}
+
 				System.out.println(arraylist);
 
 
