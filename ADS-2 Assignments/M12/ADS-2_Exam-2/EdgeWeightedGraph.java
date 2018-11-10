@@ -78,7 +78,7 @@ class EdgeWeightedGraph {
             for (Edge e : adj[i]) {
                 s += e + "  ";
             }
-            System.out.println();
+            s +="\n";
         }
         return s;
     }
