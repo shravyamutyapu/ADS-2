@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Solution {
 
 	public static void main(String[] args) {
@@ -52,14 +53,29 @@ public class Solution {
 		    int source1 = Integer.parseInt(path1[0]);
 		    int via = Integer.parseInt(path1[1]);
 		    int destiny1 = Integer.parseInt(path1[2]);
+
 			DijkstraUndirectedSP path1Obj = new DijkstraUndirectedSP(graphObj, source1);
 			if(path1Obj.hasPathTo(via)) {
+
 				DijkstraUndirectedSP viaObj = new DijkstraUndirectedSP(graphObj, via);
 				if(viaObj.hasPathTo(destiny1)) {
 					double dist = path1Obj.distTo(via);
 					dist += viaObj.distTo(destiny1);
 					System.out.println(dist);
-					System.out.println(path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1));
+
+					ArrayList<Integer> arraylist = new ArrayList<Integer>();
+					String srcvia = path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1);
+					for(int i=0;i<3;i++){
+					String[] temp = srcvia.split("-");
+					String[] val = temp[1].split(" ");
+					arraylist.add(Integer.parseInt(val[0]));
+					arraylist.add(Integer.parseInt(temp[0]));
+				}
+				System.out.println(arraylist);
+
+
+
+					//System.out.println(path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1));
 			}
 
 
