@@ -76,8 +76,9 @@ class EdgeWeightedGraph {
 
             s += i + ": ";
             for (Edge e : adj[i]) {
-                s+= e + "  ";
+                s += e + "  ";
             }
+            s += "/n";
         }
         return s;
     }
