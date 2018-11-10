@@ -140,7 +140,7 @@ public class List<E> {
     for (int i = 0; i < size; i++) {
       if (i < size - 1) {
         temp1 += list[i];
-        // temp1 += ",";
+         temp1 += " ";
       } else if (i == size - 1) {
         temp1 += list[i];
       }
