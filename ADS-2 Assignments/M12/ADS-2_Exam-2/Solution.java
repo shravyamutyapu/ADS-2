@@ -59,6 +59,7 @@ public class Solution {
 					double dist = path1Obj.distTo(via);
 					dist += viaObj.distTo(destiny1);
 					System.out.println(dist);
+					System.out.println(path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1));
 			}
 
 
