@@ -1,5 +1,4 @@
 Starting audit...
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:25: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:146:39: Expected @param tag for 'first1'. [JavadocMethod]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M12\ADS-2_Exam-2\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.

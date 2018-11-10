@@ -21,6 +21,7 @@ public class Stack<Item> implements Iterable<Item> {
     // helper linked list class
     /**
      * class node.
+     * @param <Item> item.
      */
     private static class Node<Item> {
         /**
@@ -141,7 +142,7 @@ public class Stack<Item> implements Iterable<Item> {
         private Node<Item> current;
         /**
          * constructor.
-         * @param first1.
+         * @param first1 first1.
          */
         ListIterator(final Node<Item> first1) {
             current = first1;
