@@ -30,9 +30,14 @@ public class Solution {
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
 		    String[] path = sc.nextLine().split(" ");
-			DijkstraUndirectedSP pathObj = new DijkstraUndirectedSP(graphObj, Integer.parseInt(path[0]));
-			if(pathObj.hasPathTo(Integer.parseInt(path[1]))) {
-				System.out.println(pathObj.distTo(Integer.parseInt(path[1])));
+		    int source = Integer.parseInt(path[0]);
+		    int destiny = Integer.parseInt(path[1]);
+			DijkstraUndirectedSP pathObj = new DijkstraUndirectedSP(graphObj, source);
+			if(pathObj.hasPathTo(destiny)) {
+				System.out.println(pathObj.distTo(destiny));
+			}
+			else {
+				System.out.println("No Path Found.");
 			}
 
 			break;
