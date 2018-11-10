@@ -70,18 +70,16 @@ class EdgeWeightedGraph {
         return adj[v];
     }
     public String toString(){
-        StringBuilder str = new StringBuilder();
+        String s="";
         System.out.println(ver+" vertices"+" "+edg +" edges");
         for(int i = 0;i<ver;i++){
 
-            str.append(i + ": ");
+            s += i + ": ";
             for (Edge e : adj[i]) {
-                str.append(e + "  ");
+                s+= e + "  ";
             }
-            str.append("\n");
-
         }
-        return str.toString();
+        return s;
     }
     /**.
      * { function_description }
