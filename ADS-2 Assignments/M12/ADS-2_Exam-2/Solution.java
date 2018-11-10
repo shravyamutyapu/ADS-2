@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.ArrayList;
+
 public class Solution {
 
 	public static void main(String[] args) {
@@ -63,7 +63,7 @@ public class Solution {
 					dist += viaObj.distTo(destiny1);
 					System.out.println(dist);
 
-				ArrayList<Integer> arraylist = new ArrayList<Integer>();
+				List<Integer> arraylist = new List<Integer>();
 					String srcvia = path1Obj.pathTo(via)+""+viaObj.pathTo(destiny1);
 					//System.out.println(srcvia);
 				 	String[] temp = srcvia.split(" ");
