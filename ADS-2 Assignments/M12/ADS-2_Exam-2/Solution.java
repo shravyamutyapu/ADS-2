@@ -54,12 +54,13 @@ public class Solution {
 		    int destiny1 = Integer.parseInt(path1[2]);
 			DijkstraUndirectedSP path1Obj = new DijkstraUndirectedSP(graphObj, source1);
 			if(path1Obj.hasPathTo(via)) {
-				double dist = path1Obj.distTo(via);
 				DijkstraUndirectedSP viaObj = new DijkstraUndirectedSP(graphObj, via);
 				if(viaObj.hasPathTo(destiny1)) {
+					double dist = path1Obj.distTo(via);
 					dist += viaObj.distTo(destiny1);
+					System.out.println(dist);
 			}
-			System.out.println(dist);
+
 		   }
 			else {
 				System.out.println("No Path Found.");
