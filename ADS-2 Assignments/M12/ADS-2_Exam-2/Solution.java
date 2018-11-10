@@ -17,7 +17,7 @@ public class Solution {
              Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2])));
         }
 
-		String caseToGo = null;
+		String caseToGo = sc.nextLine();
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
