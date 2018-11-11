@@ -90,10 +90,19 @@ final class Solution {
                 break;
 
             case "energy":
-               break;
+                while (scan.hasNextLine()) {
+                    String file = scan.nextLine();
+                    printEnergies("/Files/" + file);
+                }
+                break;
 
             case "findVerticalSeam":
-
+                while (scan.hasNextLine()) {
+                    String file = scan.nextLine();
+                    seam = new SeamCarver(new Picture("/Files/" + file));
+                    System.out.println(Arrays.toString(
+                        seam.findVerticalSeam()));
+                }
                 break;
 
             case "findHorizontalSeam":
