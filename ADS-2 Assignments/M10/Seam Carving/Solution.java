@@ -125,10 +125,10 @@ final class Solution {
                 break;
 
             case "removeHorizontalSeam":
-
+             break;
 
             case "removeHorizontalSeam removeVerticalSeam":
-
+            break;
 
             default:
                 seam = new SeamCarver(null);
