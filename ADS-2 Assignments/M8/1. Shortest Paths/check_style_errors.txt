@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M8\1. Shortest Paths\Solution.java:42:62: Must have at least one statement. [EmptyBlock]
+Audit done.
+Checkstyle ends with 1 errors.
