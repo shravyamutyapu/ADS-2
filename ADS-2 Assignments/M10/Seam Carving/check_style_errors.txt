@@ -1,0 +1,5 @@
+Starting audit...
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M10\Seam Carving\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M10\Seam Carving\Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
+Audit done.
+Checkstyle ends with 2 errors.
