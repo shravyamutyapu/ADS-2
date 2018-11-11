@@ -41,7 +41,7 @@ public final class Solution {
             DijkstraUndirectedSP(ewgobj, source);
             if (dijkstra.hasPathTo(hashobj.get(srcDest[1]))) {
                 System.out.println(
-                    dijkstra.distTo(hashobj.get(srcDest[1])));
+                   (int) dijkstra.distTo(hashobj.get(srcDest[1])));
             }
             queries--;
         }
