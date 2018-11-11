@@ -63,7 +63,7 @@ final class Solution {
     }
 /**
  * main method.
- * @param args Strings.
+ * @param args args.
  */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -137,7 +137,16 @@ final class Solution {
                 break;
 
             case "removeHorizontalSeam removeVerticalSeam":
-            break;
+                while (scan.hasNextLine()) {
+                    String file = scan.nextLine();
+                    seam = new SeamCarver(new Picture("/Files/" + file));
+                    int[] horizontalSeam = seam.findHorizontalSeam();
+                    seam.removeHorizontalSeam(horizontalSeam);
+                    int[] verticalSeam = seam.findVerticalSeam();
+                    seam.removeVerticalSeam(verticalSeam);
+                    printEnergies("/Files/" + file);
+                }
+                break;
 
             default:
                 seam = new SeamCarver(null);
