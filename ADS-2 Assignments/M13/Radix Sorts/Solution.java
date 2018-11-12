@@ -18,5 +18,6 @@ import java.util.Scanner;
  	    int len = arr[1].length();
 
  		lsd.sort(arr,len);
+ 		System.out.println(lsd);
  	}
  }
