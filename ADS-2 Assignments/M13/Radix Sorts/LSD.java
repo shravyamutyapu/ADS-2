@@ -3,6 +3,7 @@ public class LSD {
 
     // do not instantiate
     public LSD() { }
+    public static String[] array;
 
    /**
      * Rearranges the array of W-character strings in ascending order.
@@ -12,6 +13,7 @@ public class LSD {
      */
     public static void sort(String[] a, int w) {
         int n = a.length;
+        array = a;
         int R = 256;   // extend ASCII alphabet size
         String[] aux = new String[n];
 
@@ -34,6 +36,7 @@ public class LSD {
             // copy back
             for (int i = 0; i < n; i++)
                 a[i] = aux[i];
+                array = a;
         }
     }
 
@@ -85,6 +88,14 @@ public class LSD {
             for (int i = 0; i < n; i++)
                 a[i] = aux[i];
         }
+    }
+    public String toString(){
+        String str = "[";
+        for(int i=0;i<array.length-1;i++){
+            str += array[i]+", ";
+        }
+        str += array[array.length-1] + "]";
+        return str;
     }
 
     // /**
