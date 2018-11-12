@@ -1,0 +1,19 @@
+Starting audit...
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:8:2: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:8:23: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:9:2: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:9:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:9:33: Parameter args should be final. [FinalParameters]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:20: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:26: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:27: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:29: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:30: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:31: '<' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:33: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:15:37: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:16:31: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:20:30: ',' is not followed by whitespace. [WhitespaceAfter]
+Audit done.
+Checkstyle ends with 16 errors.
