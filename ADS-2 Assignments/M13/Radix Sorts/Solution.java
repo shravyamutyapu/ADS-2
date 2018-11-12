@@ -5,11 +5,11 @@ import java.util.Scanner;
 /**
  * solution class.
  */
-final class Solution {
+public final class Solution {
     /**
      * default constructor.
      */
-    public Solution() {
+    private Solution() {
         //unused.
     }
     /**
