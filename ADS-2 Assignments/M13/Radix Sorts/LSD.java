@@ -7,7 +7,8 @@ public class LSD {
 
    /**
      * Rearranges the array of W-character strings in ascending order.
-     *
+     * Time complexity of sort is O(wn).
+     * n is the input size.
      * @param a the array to be sorted
      * @param w the number of characters per string
      */
@@ -43,7 +44,8 @@ public class LSD {
    /**
      * Rearranges the array of 32-bit integers in ascending order.
      * This is about 2-3x faster than Arrays.sort().
-     *
+     * Time complexity of sort is O(wn).
+     * n is the input size.
      * @param a the array to be sorted
      */
     public static void sort(int[] a) {
@@ -89,6 +91,10 @@ public class LSD {
                 a[i] = aux[i];
         }
     }
+    /**
+     * time complexity is N.
+     * @return String [description]
+     */
     public String toString(){
         String str = "[";
         for(int i=0;i<array.length-1;i++){

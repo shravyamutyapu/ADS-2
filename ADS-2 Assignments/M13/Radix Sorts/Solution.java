@@ -14,6 +14,7 @@ public final class Solution {
     }
     /**
      * main method.
+     * time complexity is N.
      * @param args String.
      */
     public static void main(final String[] args) {
