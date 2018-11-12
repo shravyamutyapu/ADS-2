@@ -1,5 +1,5 @@
 Starting audit...
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:8:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M13\Radix Sorts\Solution.java:12:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
 Checkstyle ends with 2 errors.

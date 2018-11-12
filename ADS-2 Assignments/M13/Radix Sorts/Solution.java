@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * solution class.
  */
-public class Solution {
+final class Solution {
     /**
      * default constructor.
      */
@@ -31,3 +31,4 @@ public class Solution {
         System.out.println(lsd);
     }
 }
+
