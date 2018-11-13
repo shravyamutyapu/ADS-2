@@ -29,8 +29,8 @@ public class Solution {
 			//System.out.println(words[i]);
 			String[] tokens = new String[len];
 			for (int j = 0; j < words[i].length(); j++) {
-				tokens[j] = words[i].substring(j, words[i].length());
-				tstObj.put(tokens[j], 0);
+	tokens[j] = words[i].substring(j, words[i].length());
+			tstObj.put(tokens[j], 0);
 			}
 		}
 		System.out.println(tstObj.keysWithPrefix(input));
@@ -45,3 +45,6 @@ public class Solution {
 		return words;
 	}
 }
+
+
+
