@@ -7,10 +7,17 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
 		TST tstObj = new TST();
-		for(int i=0;i<words.length;i++){
-			if(words[i].contains(input))
-			System.out.println(words[i]);
+		int len = words.length;
+		for(int i=0;i<len;i++){
+			//if(words[i].contains(input))
+			//System.out.println(words[i]);
+			String[] tokens = new String[len];
+			for (int j = 0; j < words[i].length(); j++) {
+				tokens[j] = words[i].substring(j, words[i].length());
+				tstObj.put(tokens[j], 0);
+			}
 		}
+		System.out.println(tstObj.keysWithPrefix(input));
 	}
 
 	public static String[] loadWords() {
