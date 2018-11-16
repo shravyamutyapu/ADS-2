@@ -50,7 +50,21 @@ public class BoggleSolver {
 				list.add(prefix);
 			}
 		}
+		if (temp || dict.contains(prefix)) {
+            if (j - 1 >= 0 && !array[i][j - 1])
+                validate(array, prefix, i, j - 1, count);
+            if (j + 1 < board.cols() && !array[i][j + 1])
+                validate(array, prefix, i, j + 1, count);
+            if (i - 1 >= 0) {
+                if (j - 1 >= 0 && !array[i - 1][j - 1])
+                    validate(array, prefix, i - 1, j - 1, count);
+                if (!array[i - 1][j])
+                    validate(array, prefix, i - 1, j, count);
+                if (j + 1 < board.cols() && !array[i - 1][j + 1])
+                    validate(array, prefix, i - 1, j + 1, count);
+            }
 	}
+}
 
 
 	private int getScore(String word) {
