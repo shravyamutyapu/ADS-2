@@ -1,4 +1,3 @@
-
 public class TrieST<Value> {
     private static final int R = 256;        // extended ASCII
 
@@ -160,6 +159,11 @@ public class TrieST<Value> {
             collect(x.next[c], prefix, pattern, results);
             prefix.deleteCharAt(prefix.length() - 1);
         }
+    }
+
+    public boolean contains1(final String prefix) {
+        Node x = get(root, prefix, 0);
+        return !(x == null);
     }
 
     /**

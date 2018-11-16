@@ -51,7 +51,7 @@ public class BoggleSolver {
                 list.add(prefix);
             }
         }
-            if (temp || dict.contains(prefix)) {
+            if (temp || dict.contains1(prefix)) {
             if (j - 1 >= 0 && !matrix[i][j - 1])
                 validate(matrix, prefix, i, j - 1, count);
             if (j + 1 < board.cols() && !matrix[i][j + 1])
@@ -63,14 +63,6 @@ public class BoggleSolver {
                     validate(matrix, prefix, i - 1, j, count);
                 if (j + 1 < board.cols() && !matrix[i - 1][j + 1])
                     validate(matrix, prefix, i - 1, j + 1, count);
-            }
-            if (i + 1 < board.rows()) {
-                if (j - 1 >= 0 && !matrix[i + 1][j - 1])
-                    validate(matrix, prefix, i + 1, j - 1, count);
-                if (!matrix[i+1][j])
-                    validate(matrix, prefix, i + 1, j, count);
-                if (j + 1 < board.cols() && !matrix[i + 1][j + 1])
-                    validate(matrix, prefix, i + 1, j + 1, count);
             }
         }
         matrix[i][j] = false;
