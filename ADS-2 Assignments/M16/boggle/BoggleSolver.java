@@ -31,40 +31,50 @@ public class BoggleSolver {
 		return list;
 	}
 
-	private void validate(boolean[][] array, String prefix,
-	                      int i, int j, int count) {
-		char c = board.getLetter(i, j);
-		if (c == 'Q') {
-			prefix += "QU";
-			count += 2;
-		} else {
-			prefix += c;
-			count += 1;
-		}
-		array[i][j] = true;
-		boolean temp = false;
-		if (dict.contains(prefix)) {
-			temp = true;
-			if (count >= 3 && !map.containsKey(prefix)) {
-				map.put(prefix, getScore(prefix));
-				list.add(prefix);
-			}
-		}
-		if (temp || dict.contains(prefix)) {
-            if (j - 1 >= 0 && !array[i][j - 1])
-                validate(array, prefix, i, j - 1, count);
-            if (j + 1 < board.cols() && !array[i][j + 1])
-                validate(array, prefix, i, j + 1, count);
-            if (i - 1 >= 0) {
-                if (j - 1 >= 0 && !array[i - 1][j - 1])
-                    validate(array, prefix, i - 1, j - 1, count);
-                if (!array[i - 1][j])
-                    validate(array, prefix, i - 1, j, count);
-                if (j + 1 < board.cols() && !array[i - 1][j + 1])
-                    validate(array, prefix, i - 1, j + 1, count);
+	private void validate(boolean[][] matrix, String prefix,
+        int i, int j,int count) {
+        char c = board.getLetter(i, j);
+        if (c == 'Q') {
+            prefix += "QU";
+            count += 2;
+        }
+        else {
+            prefix += c;
+            count += 1;
+        }
+        matrix[i][j] = true;
+        boolean temp = false;
+        if (dict.contains(prefix)) {
+            temp = true;
+            if (count >= 3 && !map.containsKey(prefix)) {
+                map.put(prefix, getScore(prefix));
+                list.add(prefix);
             }
-	}
-}
+        }
+            if (temp || dict.contains(prefix)) {
+            if (j - 1 >= 0 && !matrix[i][j - 1])
+                validate(matrix, prefix, i, j - 1, count);
+            if (j + 1 < board.cols() && !matrix[i][j + 1])
+                validate(matrix, prefix, i, j + 1, count);
+            if (i - 1 >= 0) {
+                if (j - 1 >= 0 && !matrix[i - 1][j - 1])
+                    validate(matrix, prefix, i - 1, j - 1, count);
+                if (!matrix[i - 1][j])
+                    validate(matrix, prefix, i - 1, j, count);
+                if (j + 1 < board.cols() && !matrix[i - 1][j + 1])
+                    validate(matrix, prefix, i - 1, j + 1, count);
+            }
+            if (i + 1 < board.rows()) {
+                if (j - 1 >= 0 && !matrix[i + 1][j - 1])
+                    validate(matrix, prefix, i + 1, j - 1, count);
+                if (!matrix[i+1][j])
+                    validate(matrix, prefix, i + 1, j, count);
+                if (j + 1 < board.cols() && !matrix[i + 1][j + 1])
+                    validate(matrix, prefix, i + 1, j + 1, count);
+            }
+        }
+        matrix[i][j] = false;
+    }
 
 
 	private int getScore(String word) {
