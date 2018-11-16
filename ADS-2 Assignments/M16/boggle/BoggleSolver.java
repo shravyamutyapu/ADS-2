@@ -25,7 +25,7 @@ public class BoggleSolver {
 		boolean[][] marked = new boolean[board.rows()][board.cols()];
 		for (int i = 0; i < board.rows(); i++) {
 			for (int j = 0; j < board.cols(); j++) {
-				validate(marked, ".", i, j, 0);
+				validate(marked, "", i, j, 0);
 			}
 		}
 		return list;
