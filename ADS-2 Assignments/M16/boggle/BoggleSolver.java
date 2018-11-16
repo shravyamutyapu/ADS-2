@@ -1,33 +1,80 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class BoggleSolver {
-	// Initializes the data structure using the given array of strings as the dictionary.
-	// (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
+
+	private TrieST<Integer> dict;
+
+	private BoggleBoard board;
+
+	private HashMap<String, Integer> map;
+
+	private ArrayList<String> list;
+
 	public BoggleSolver(String[] dictionary) {
-
+		dict = new TrieST<>();
+		for (int i = 0; i < dictionary.length; i++) {
+			dict.put(dictionary[i], getScore(dictionary[i]));
+		}
 	}
 
-	// Returns the set of all valid words in the given Boggle board, as an Iterable.
 	public Iterable<String> getAllValidWords(BoggleBoard board) {
-		return new Bag<String>();
+		this.board = board;
+		this.map = new HashMap<>();
+		this.list = new ArrayList<>();
+		boolean[][] marked = new boolean[board.rows()][board.cols()];
+		for (int i = 0; i < board.rows(); i++) {
+			for (int j = 0; j < board.cols(); j++) {
+				validate(marked, ".", i, j, 0);
+			}
+		}
+		return list;
 	}
 
-	// Returns the score of the given word if it is in the dictionary, zero otherwise.
-	// (You can assume the word contains only the uppercase letters A through Z.)
-	public int scoreOf(String word) {
-		int len = word.length();
-		if (len > 0 && len <= 2) {
-			return 0;
-		} else if (len >=3 && len <= 4) {
-			return 1;
-		} else if (len == 5) {
-			return 2;
-		} else if (len == 6) {
-			return 3;
-		} else if (len == 7) {
-			return 5;
-		} else if (len >= 8) {
-			return 11;
+	private void validate(boolean[][] array, String prefix,
+	                      int i, int j, int count) {
+		char c = board.getLetter(i, j);
+		if (c == 'Q') {
+			prefix += "QU";
+			count += 2;
+		} else {
+			prefix += c;
+			count += 1;
 		}
-		return 0;
+		array[i][j] = true;
+		boolean temp = false;
+		if (dict.contains(prefix)) {
+			temp = true;
+			if (count >= 3 && !map.containsKey(prefix)) {
+				map.put(prefix, getScore(prefix));
+				list.add(prefix);
+			}
+		}
+	}
+
+
+	private int getScore(String word) {
+			int len = word.length();
+			if (len <= 2)
+				return 0;
+			if (len == 3)
+				return 1;
+			else if (len == 4)
+				return 1;
+			else if (len == 5)
+				return 2;
+			else if (len == 6)
+				return 3;
+			else if (len == 7)
+				return 5;
+			else if (len >= 8)
+				return 11;
+			else return 0;
 		}
 
-}
+		public int scoreOf(String word) {
+			if (dict.contains(word))
+				return dict.get(word);
+			return 0;
+		}
+	}
