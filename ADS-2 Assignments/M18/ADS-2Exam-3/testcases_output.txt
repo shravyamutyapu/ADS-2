@@ -55,7 +55,7 @@ messagesome
 going
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:26)
+	at Solution.main(Solution.java:27)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -122,7 +122,7 @@ fine
 seeking
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:38)
+	at Solution.main(Solution.java:39)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -132,7 +132,7 @@ right
 words
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:57)
+	at Solution.main(Solution.java:58)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -183,5 +183,5 @@ paper
 keep
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:70)
+	at Solution.main(Solution.java:71)
 ----------------------------------------

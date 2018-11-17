@@ -11,6 +11,7 @@ public class Solution {
 		switch (cases) {
 		case "loadDictionary":
 			// input000.txt and output000.txt
+		    In in = new In("/Files/t9.csv");
 			BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
 			while (scan.hasNextLine()) {
 				String key = scan.nextLine();
