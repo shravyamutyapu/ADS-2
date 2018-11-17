@@ -11,7 +11,6 @@ public class Solution {
 		switch (cases) {
 		case "loadDictionary":
 			// input000.txt and output000.txt
-		    In in = new In("/Files/t9.csv");
 			BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
 			while (scan.hasNextLine()) {
 				String key = scan.nextLine();
@@ -22,6 +21,7 @@ public class Solution {
 		case "getAllPrefixes":
 			// input001.txt and output001.txt
 			T9 t9 = new T9(loadDictionary("/Files/t9.csv"));
+			In in = new In("/Files/t9.csv" + t9);
 			while (scan.hasNextLine()) {
 				String prefix = scan.nextLine();
 				for (String each : t9.getAllWords(prefix)) {
