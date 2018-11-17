@@ -54,15 +54,11 @@ messages
 messagesome
 going
 Your Output: 
-Exception in thread "main" java.lang.IllegalArgumentException: Could not open /Files/t9.csvT9@7a5d012c
-	at In.<init>(In.java:190)
-	at Solution.main(Solution.java:24)
-Caused by: java.net.MalformedURLException: no protocol: /Files/t9.csvT9@7a5d012c
-	at java.base/java.net.URL.<init>(URL.java:627)
-	at java.base/java.net.URL.<init>(URL.java:523)
-	at java.base/java.net.URL.<init>(URL.java:470)
-	at In.<init>(In.java:177)
-	... 1 more
+Exception in thread "main" java.util.NoSuchElementException: called min() with empty symbol table
+	at BinarySearchST.min(BinarySearchST.java:272)
+	at BinarySearchST.keys(BinarySearchST.java:401)
+	at T9.<init>(Solution.java:102)
+	at Solution.main(Solution.java:23)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -128,8 +124,11 @@ find
 fine
 seeking
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:39)
+Exception in thread "main" java.util.NoSuchElementException: called min() with empty symbol table
+	at BinarySearchST.min(BinarySearchST.java:272)
+	at BinarySearchST.keys(BinarySearchST.java:401)
+	at T9.<init>(Solution.java:102)
+	at Solution.main(Solution.java:35)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -138,8 +137,11 @@ is
 right
 words
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:58)
+Exception in thread "main" java.util.NoSuchElementException: called min() with empty symbol table
+	at BinarySearchST.min(BinarySearchST.java:272)
+	at BinarySearchST.keys(BinarySearchST.java:401)
+	at T9.<init>(Solution.java:102)
+	at Solution.main(Solution.java:51)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -189,6 +191,9 @@ bids
 paper
 keep
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:71)
+Exception in thread "main" java.util.NoSuchElementException: called min() with empty symbol table
+	at BinarySearchST.min(BinarySearchST.java:272)
+	at BinarySearchST.keys(BinarySearchST.java:401)
+	at T9.<init>(Solution.java:102)
+	at Solution.main(Solution.java:66)
 ----------------------------------------
