@@ -142,17 +142,18 @@ final Node<Value> x, final String key, final int d) {
     }
     /**
      * .
-     * @param x node type.
+     * @param t node type.
      * @param key string.
      * @param val value.
      * @param d int.
      * @return Node.
      */
-    private Node<Value> put(final Node<Value> x,
+    private Node<Value> put(Node<Value> t,
         final String key, final Value val, final int d) {
+        Node<Value> x = t;
         char c = key.charAt(d);
         if (x == null) {
-            //x = new Node<Value>();
+        x = new Node<Value>();
             x.c = c;
         }
         if (c < x.c) {
@@ -337,3 +338,5 @@ final int i, final String pattern, final Queue<String> queue) {
         return true;
     }
 }
+
+

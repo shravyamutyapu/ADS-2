@@ -1,4 +1,4 @@
 Starting audit...
-[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\github\MSIT\ADS-2\ADS-2 Assignments\M18\ADS-2Exam-3\TST.java:151:29: Parameter t should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 1 errors.
