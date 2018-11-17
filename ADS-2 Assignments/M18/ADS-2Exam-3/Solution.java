@@ -1,9 +1,20 @@
+/**
+ * importing files.
+ */
 import java.util.Scanner;
 import java.util.TreeSet;
-
+import java.util.HashMap;
+/**
+ * Solution class.
+ */
 public class Solution {
 
 	// Don't modify this method.
+	/**
+	 * main method.
+	 * time complexity is O(N).
+	 * @param args [description]
+	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String cases = scan.nextLine();
@@ -83,6 +94,7 @@ public class Solution {
 	// Don't modify this method.
 	/**
 	 * helper.
+	 * Time complexity is O(1).
 	 * @param file [description]
 	 * @return String[]
 	 */
@@ -110,15 +122,14 @@ public class Solution {
 	}
 
 }
-
+/**
+ * T9 class.
+ */
 class T9 {
     TST<Integer> tstObj = new TST<Integer>();
     /**
-     * @brief [brief description]
-     * @details [long description]
-     *
-     * @param st [description]
-     * @return [description]
+     * constructor.
+     * @param st symbol table.
      */
 	public T9(BinarySearchST<String, Integer> st) {
 		// your code goes here
@@ -128,19 +139,45 @@ class T9 {
 
 	}
 
-	// get all the prefixes that match with given prefix.
+	/**
+	 * get all the prefixes.
+	 * that match with given prefix.
+	 * @param prefix String.
+	 */
 	public Iterable<String> getAllWords(String prefix) {
 		// your code goes here
 
 		return tstObj.keysWithPrefix(prefix);
 	}
-
+    /**
+     * guessed words.
+     * @param t9Signature String.
+     * @return.
+     */
 	public Iterable<String> potentialWords(String t9Signature) {
 		// your code goes here
+		HashMap<Integer,String> hash = new HashMap<Integer,String> ();
+		hash.put(2, "abc");
+        hash.put(3, "def");
+        hash.put(4, "ghi");
+        hash.put(5, "jkl");
+        hash.put(6, "mno");
+        hash.put(7, "pqrs");
+        hash.put(8, "tuv");
+        hash.put(9, "wxyz");
+
 		return null;
 	}
 
-	// return all possibilities(words), find top k with highest frequency.
+	/**
+	 * Time complexity is O(N).
+	 * return all possibilities(words),
+	 * find top k with highest frequency.
+	 * @param words [description]
+	 * @param k [description]
+	 *
+	 * @return [description]
+	 */
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		// your code goes here
 		MaxPQ<Integer> pqObj = new MaxPQ<Integer>();
