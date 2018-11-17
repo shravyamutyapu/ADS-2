@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.TreeSet;
 
 public class Solution {
 
@@ -81,13 +81,22 @@ public class Solution {
 	}
 
 	// Don't modify this method.
+	/**
+	 * helper.
+	 * @param file [description]
+	 * @return String[]
+	 */
 	public static String[] toReadFile(String file) {
 		In in = new In(file);
 		return in.readAllStrings();
 	}
-
+    /**
+     * Time complexity is O(N).
+     * @param file [description]
+     * @return BinarySearchST[description]
+     */
 	public static BinarySearchST<String, Integer> loadDictionary(String file) {
-		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
+		BinarySearchST<String, Integer> st = new BinarySearchST<String, Integer>();
 		// your code goes here
         for (String word : toReadFile(file)) {
 			word = word.toLowerCase();
@@ -103,12 +112,18 @@ public class Solution {
 }
 
 class T9 {
-    TST<Integer> tstInt = new TST<Integer>();
-
+    TST<Integer> tstObj = new TST<Integer>();
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *
+     * @param st [description]
+     * @return [description]
+     */
 	public T9(BinarySearchST<String, Integer> st) {
 		// your code goes here
 		for(String word: st.keys()) {
-			tstInt.put(word, st.get(word));
+			tstObj.put(word, st.get(word));
 		}
 
 	}
@@ -117,7 +132,7 @@ class T9 {
 	public Iterable<String> getAllWords(String prefix) {
 		// your code goes here
 
-		return tstInt.keysWithPrefix(prefix);
+		return tstObj.keysWithPrefix(prefix);
 	}
 
 	public Iterable<String> potentialWords(String t9Signature) {
@@ -128,7 +143,20 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		// your code goes here
-		return null;
+		MaxPQ<Integer> pqObj = new MaxPQ<Integer>();
+		for (String each : words) {
+			pqObj.insert(tstObj.get(each));
+		}
+		TreeSet<String> treeObj = new TreeSet<String>();
+		for (int i = 0; i < k; i++) {
+			int value = pqObj.delMax();
+			for (String word : words) {
+				if (value == tstObj.get(word)) {
+					treeObj.add(word);
+				}
+			}
+		}
+		return treeObj;
 	}
 
 	// final output
