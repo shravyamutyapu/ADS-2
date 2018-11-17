@@ -1,5 +1,6 @@
 /**
  * TST class.
+ * @param <Value> tag.
  */
 public class TST<Value> {
     /**
@@ -12,6 +13,7 @@ public class TST<Value> {
     private Node<Value> root;
     /**
      * Node class.
+     * @param <Value> tag
      */
     private static class Node<Value> {
         /**
@@ -53,7 +55,7 @@ public class TST<Value> {
      * @throws IllegalArgumentException if
      * {@code key} is {@code null}
      */
-    public boolean contains(String key) {
+    public boolean contains(final String key) {
         if (key == null) {
             throw new IllegalArgumentException(
                 "argument to contains() is null");
@@ -71,7 +73,7 @@ public class TST<Value> {
      * @throws IllegalArgumentException i
      * if {@code key} is {@code null}
      */
-    public Value get(String key) {
+    public Value get(final String key) {
         if (key == null) {
             throw new IllegalArgumentException(
                 "calls get() with null argument");
@@ -95,7 +97,8 @@ public class TST<Value> {
      * @param d int.
      * @return Node.
      */
-    private Node<Value> get(Node<Value> x, String key, int d) {
+    private Node<Value> get(
+final Node<Value> x, final String key, final int d) {
         if (x == null) {
             return null;
         }
@@ -127,20 +130,29 @@ public class TST<Value> {
      * @throws IllegalArgumentException if
      * {@code key} is {@code null}
      */
-    public void put(String key, Value val) {
+    public void put(final String key, final Value val) {
         if (key == null) {
             throw new IllegalArgumentException(
                 "calls put() with null key");
         }
-        if (!contains(key)) n++;
+        if (!contains(key)) {
+            n++;
+        }
         root = put(root, key, val, 0);
     }
-
-    private Node<Value> put(Node<Value> x,
-                            String key, Value val, int d) {
+    /**
+     * .
+     * @param x node type.
+     * @param key string.
+     * @param val value.
+     * @param d int.
+     * @return Node.
+     */
+    private Node<Value> put(final Node<Value> x,
+        final String key, final Value val, final int d) {
         char c = key.charAt(d);
         if (x == null) {
-            x = new Node<Value>();
+            //x = new Node<Value>();
             x.c = c;
         }
         if (c < x.c) {
@@ -166,7 +178,7 @@ public class TST<Value> {
      * @throws IllegalArgumentException i
      * if {@code query} is {@code null}
      */
-    public String longestPrefixOf(String query) {
+    public String longestPrefixOf(final String query) {
         if (query == null) {
             throw new IllegalArgumentException(
                 "calls longestPrefixOf() with null argument");
@@ -220,7 +232,7 @@ public class TST<Value> {
      * @throws IllegalArgumentException if
      * {@code prefix} is {@code null}
      */
-    public Iterable<String> keysWithPrefix(String prefix) {
+    public Iterable<String> keysWithPrefix(final String prefix) {
         if (prefix == null) {
             throw new IllegalArgumentException(
                 "calls keysWithPrefix() with null argument");
@@ -237,9 +249,16 @@ public class TST<Value> {
         return queue;
     }
 
-    // all keys in subtrie rooted at x with given prefix
+    /**
+     * all keys in subtrie rooted.
+     * at x with given prefix
+     * @param x Node.
+     * @param prefix StringBuilder.
+     * @param queue queue.
+     */
     private void collect(
-Node<Value> x, StringBuilder prefix, Queue<String> queue) {
+final Node<Value> x,
+final StringBuilder prefix, final Queue<String> queue) {
         if (x == null) {
             return;
         }
@@ -263,7 +282,7 @@ Node<Value> x, StringBuilder prefix, Queue<String> queue) {
      * as an iterable, where . is treated
      * as a wildcard character.
      */
-    public Iterable<String> keysThatMatch(String pattern) {
+    public Iterable<String> keysThatMatch(final String pattern) {
         Queue<String> queue = new Queue<String>();
         collect(root, new StringBuilder(), 0, pattern, queue);
         return queue;
@@ -276,8 +295,8 @@ Node<Value> x, StringBuilder prefix, Queue<String> queue) {
      * @param pattern String
      * @param queue queue
      */
-    private void collect(Node<Value> x, StringBuilder prefix,
-            int i, String pattern, Queue<String> queue) {
+    private void collect(final Node<Value> x, final StringBuilder prefix,
+final int i, final String pattern, final Queue<String> queue) {
         if (x == null) {
             return;
         }
@@ -303,7 +322,7 @@ Node<Value> x, StringBuilder prefix, Queue<String> queue) {
      * @param prefix [description]
      * @return bool [description]
      */
-    public boolean hasPrefix(String prefix) {
+    public boolean hasPrefix(final String prefix) {
         Node<Value> prefixNode = get(root, prefix, 0);
         if (prefixNode == null) {
             return false;
