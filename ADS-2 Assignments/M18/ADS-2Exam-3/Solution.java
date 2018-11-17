@@ -21,7 +21,7 @@ public class Solution {
 		case "getAllPrefixes":
 			// input001.txt and output001.txt
 			T9 t9 = new T9(loadDictionary("/Files/t9.csv"));
-			In in = new In("/Files/t9.csv" + t9);
+
 			while (scan.hasNextLine()) {
 				String prefix = scan.nextLine();
 				for (String each : t9.getAllWords(prefix)) {
