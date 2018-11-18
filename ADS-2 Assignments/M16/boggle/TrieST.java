@@ -49,13 +49,15 @@ public class TrieST<Value> {
      * @throws IllegalArgumentException i
      * if {@code key} is {@code null}
      */
-    public Value get(String key) {
+    public Value get(final String key) {
         if (key == null) {
             throw new IllegalArgumentException(
                 "argument to get() is null");
         }
         Node x = get(root, key, 0);
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         return (Value) x.val;
     }
 
@@ -69,7 +71,7 @@ public class TrieST<Value> {
      * @throws IllegalArgumentException i
      * f {@code key} is {@code null}
      */
-    public boolean contains(String key) {
+    public boolean contains(final String key) {
         if (key == null) {
             throw new IllegalArgumentException(
                 "argument to contains() is null");
@@ -83,7 +85,8 @@ public class TrieST<Value> {
      * @param d int.
      * @return Node.
      */
-    private Node get(Node x, String key, int d) {
+    private Node get(final Node x,
+        final String key, final int d) {
         if (x == null) {
             return null;
         }
@@ -107,27 +110,28 @@ public class TrieST<Value> {
      * @throws IllegalArgumentException i
      * f {@code key} is {@code null}
      */
-    public void put(String key, Value val) {
+    public void put(final String key, final Value val) {
         if (key == null) {
             throw new IllegalArgumentException(
                 "first argument to put() is null");
         }
         if (val == null) {
             delete(key);
-        }
-        else {
+        } else {
             root = put(root, key, val, 0);
         }
     }
     /**
      * put method.
-     * @param x Node.
+     * @param t Node.
      * @param key key.
      * @param val val.
      * @param d int.
      * @return Node.
      */
-    private Node put(Node x, String key, Value val, int d) {
+    private Node put(final Node t, final String key,
+        final Value val, final int d) {
+        Node x = t;
         if (x == null) {
             x = new Node();
         }
@@ -185,7 +189,7 @@ public class TrieST<Value> {
      * set that start with {@code prefix},
      *     as an iterable
      */
-    public Iterable<String> keysWithPrefix(String prefix) {
+    public Iterable<String> keysWithPrefix(final String prefix) {
         Queue<String> results = new Queue<String>();
         Node x = get(root, prefix, 0);
         collect(x, new StringBuilder(prefix), results);
@@ -197,8 +201,8 @@ public class TrieST<Value> {
      * @param prefix [description]
      * @param results [description]
      */
-    private void collect(Node x,
-StringBuilder prefix, Queue<String> results) {
+    private void collect(final Node x,
+final StringBuilder prefix, final Queue<String> results) {
         if (x == null) {
             return;
         }
@@ -222,7 +226,7 @@ StringBuilder prefix, Queue<String> results) {
      *     as an iterable, where . is
      *     treated as a wildcard character.
      */
-    public Iterable<String> keysThatMatch(String pattern) {
+    public Iterable<String> keysThatMatch(final String pattern) {
         Queue<String> results = new Queue<String>();
         collect(root, new StringBuilder(), pattern, results);
         return results;
@@ -234,8 +238,8 @@ StringBuilder prefix, Queue<String> results) {
      * @param pattern [description]
      * @param results [description]
      */
-    private void collect(Node x, StringBuilder prefix,
-        String pattern, Queue<String> results) {
+    private void collect(final Node x, final StringBuilder prefix,
+        final String pattern, final Queue<String> results) {
         if (x == null) {
             return;
         }
@@ -259,7 +263,11 @@ StringBuilder prefix, Queue<String> results) {
             prefix.deleteCharAt(prefix.length() - 1);
         }
     }
-
+    /**
+     * bool.
+     * @param prefix pre.
+     * @return boolean.
+     */
     public boolean contains1(final String prefix) {
         Node x = get(root, prefix, 0);
         return !(x == null);
@@ -276,7 +284,7 @@ StringBuilder prefix, Queue<String> results) {
      * @throws IllegalArgumentException i
      * f {@code query} is {@code null}
      */
-    public String longestPrefixOf(String query) {
+    public String longestPrefixOf(final String query) {
         if (query == null) {
             throw new IllegalArgumentException(
         "argument to longestPrefixOf() is null");
@@ -284,27 +292,37 @@ StringBuilder prefix, Queue<String> results) {
         int length = longestPrefixOf(root, query, 0, -1);
         if (length == -1) {
             return null;
-        }
-        else {
+        } else {
             return query.substring(0, length);
         }
     }
 
-    /**
-     * returns the length of the longest string key in the subtrie
-    // rooted at x that is a prefix of the query string,
-    // assuming the first d character match and we have already
-    // found a prefix match of given length (-1 if no such match)
+    /**.
+     * returns the length of the longest.
+     * string key in the subtrie
+    // rooted at x that is a prefix
+    of the query string,
+    // assuming the first d character
+    match and we have already
+    // found a prefix match of given
+    length (-1 if no such match)
      * @param x [description]
      * @param query [description]
      * @param d [description]
      * @param length [description]
      * @return [description]
      */
-    private int longestPrefixOf(Node x, String query, int d, int length) {
-        if (x == null) return length;
-        if (x.val != null) length = d;
-        if (d == query.length()) return length;
+    private int longestPrefixOf(final Node x,
+final String query, final int d, int length) {
+        if (x == null) {
+            return length;
+        }
+        if (x.val != null) {
+            length = d;
+        }
+        if (d == query.length()) {
+            return length;
+        }
         char c = query.charAt(d);
         return longestPrefixOf(x.next[c], query, d + 1, length);
     }
@@ -312,10 +330,14 @@ StringBuilder prefix, Queue<String> results) {
     /**
      * Removes the key from the set if the key is present.
      * @param key the key
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @throws IllegalArgumentException i
+     * f {@code key} is {@code null}
      */
-    public void delete(String key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
+    public void delete(final String key) {
+        if (key == null) {
+            throw new IllegalArgumentException(
+                "argument to delete() is null");
+        }
         root = delete(root, key, 0);
     }
     /**
@@ -325,7 +347,8 @@ StringBuilder prefix, Queue<String> results) {
      * @param d [description]
      * @return [description]
      */
-    private Node delete(Node x, String key, int d) {
+    private Node delete(final Node x,
+        final String key, final int d) {
         if (x == null) {
             return null;
         }
