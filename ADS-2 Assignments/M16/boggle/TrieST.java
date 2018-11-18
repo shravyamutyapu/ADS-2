@@ -309,11 +309,12 @@ final StringBuilder prefix, final Queue<String> results) {
      * @param x [description]
      * @param query [description]
      * @param d [description]
-     * @param length [description]
+     * @param len [description]
      * @return [description]
      */
     private int longestPrefixOf(final Node x,
-final String query, final int d, int length) {
+final String query, final int d, final int len) {
+        int length = len;
         if (x == null) {
             return length;
         }
