@@ -78,3 +78,6 @@ class Percolation {
         return connected.connected(size * size, (size * size) + 1);
     }
 }
+
+
+
