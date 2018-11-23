@@ -1,8 +1,24 @@
+/**
+ * direceted cycle class.
+ */
 public class DirectedCycle {
-    private boolean[] marked;        // marked[v] = has vertex v been marked?
-    private int[] edgeTo;            // edgeTo[v] = previous vertex on path to v
-    private boolean[] onStack;       // onStack[v] = is vertex on the stack?
-    private Stack<Integer> cycle;    // directed cycle (or null if no such cycle)
+    /**
+     * marked[v] = has vertex v been marked?
+     * the above will be stored.
+     */
+    private boolean[] marked;
+    /**
+     * edgeTo[v] = previous vertex on path to v.
+     */
+    private int[] edgeTo;
+    /**
+     * onStack[v] = is vertex on the stack?
+     */
+    private boolean[] onStack;
+    /**
+     * directed cycle (or null if no such cycle)
+     */
+    private Stack<Integer> cycle;
 
     /**
      * Determines whether the digraph

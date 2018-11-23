@@ -4,7 +4,7 @@ import java.util.Scanner;
 public final class Solution {
 
     private Solution() {
-        //unused
+        //unused.
     }
     /**.
      *
