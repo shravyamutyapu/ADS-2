@@ -39,6 +39,14 @@ public class BreadthFirstDirectedPaths {
     }
 
     // BFS from single source
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *//* Time complexity is O(V).
+    //V is the number of vertices.
+     * @param G [description]
+     * @param s [description]
+     */
     private void bfs(Digraph G, int s) {
         Queue<Integer> q = new Queue<Integer>();
         marked[s] = true;
@@ -79,6 +87,7 @@ public class BreadthFirstDirectedPaths {
     }
 
     /**
+     * Time complexity is O(1).
      * Is there a directed path from the source {@code s} (or sources) to vertex {@code v}?
      * @param v the vertex
      * @return {@code true} if there is a directed path, {@code false} otherwise
@@ -92,6 +101,7 @@ public class BreadthFirstDirectedPaths {
     /**
      * Returns the number of edges in a shortest path from the source {@code s}
      * (or sources) to vertex {@code v}?
+     *  * Time complexity is O(1).
      * @param v the vertex
      * @return the number of edges in a shortest path
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -121,6 +131,7 @@ public class BreadthFirstDirectedPaths {
     }
 
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
+     //* Time complexity is O(1).
     private void validateVertex(int v) {
         int V = marked.length;
         if (v < 0 || v >= V)
@@ -128,6 +139,8 @@ public class BreadthFirstDirectedPaths {
     }
 
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
+     //* Time complexity is O(V).
+    //V is the number of vertices.
     private void validateVertices(Iterable<Integer> vertices) {
         if (vertices == null) {
             throw new IllegalArgumentException("argument is null");
@@ -141,12 +154,12 @@ public class BreadthFirstDirectedPaths {
     }
 
 
-    /**
-     * Unit tests the {@code BreadthFirstDirectedPaths} data type.
-     *
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
+    // /**
+    //  * Unit tests the {@code BreadthFirstDirectedPaths} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
         // In in = new In(args[0]);
         // Digraph G = new Digraph(in);
         // // StdOut.println(G);
@@ -172,4 +185,4 @@ public class BreadthFirstDirectedPaths {
     }
 
 
-}
+

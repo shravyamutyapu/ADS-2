@@ -48,6 +48,8 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     }
     /**
      * building graph.
+     * Time complexity is O(V).
+     * V is the number of vertices.
      * @param hypernyms [description]
      * @throws Exception if null.
      */
@@ -68,6 +70,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     }
     /**
      * flag check.
+     * Time complexity is O(1).
      * @return bool[description]
      */
     private boolean isflag() {
@@ -87,6 +90,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     }
     /**
      * rooted digraph check.
+     * Time complexity is O(1).
      * @param g2 [description]
      */
     private void isrooteddigraph(final Digraph g2) {
@@ -132,6 +136,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     }
 
     /**
+     * Time complexity is O(1).
      *  returns all WordNet nouns.
      * @return [description]
      */
@@ -140,6 +145,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     }
     /**
      * // is the word a WordNet noun?.
+     * Time complexity is O(1).
      * @param word [description]
      * @return [description]
      */
@@ -147,6 +153,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
         return false;
     }
     /**
+     * * Time complexity is O(1).
      * distance between nounA and nounB (defined below).
      * @param nounA [description]
      * @param nounB [description]
@@ -159,6 +166,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
         return dist;
     }
     /**
+     * Time complexity is O(1).
      * @brief [brief description]
      * @details [long description]
      * a synset (second field of synsets.txt)
@@ -177,6 +185,7 @@ private LinearProbingHashST<String, ArrayList<Integer>> ht;
     }
     /**
      * prints.
+     * Time complexity is O(1).
      */
 
     public void print() {

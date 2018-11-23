@@ -4,27 +4,27 @@
  *  Dependencies: Bag.java In.java StdOut.java
  *  Data files:   https://algs4.cs.princeton.edu/42digraph/tinyDG.txt
  *                https://algs4.cs.princeton.edu/42digraph/mediumDG.txt
- *                https://algs4.cs.princeton.edu/42digraph/largeDG.txt  
+ *                https://algs4.cs.princeton.edu/42digraph/largeDG.txt
  *
  *  A graph, implemented using an array of lists.
  *  Parallel edges and self-loops are permitted.
  *
  *  % java Digraph tinyDG.txt
  *  13 vertices, 22 edges
- *  0: 5 1 
- *  1: 
- *  2: 0 3 
- *  3: 5 2 
- *  4: 3 2 
- *  5: 4 
- *  6: 9 4 8 0 
+ *  0: 5 1
+ *  1:
+ *  2: 0 3
+ *  3: 5 2
+ *  4: 3 2
+ *  5: 4
+ *  6: 9 4 8 0
  *  7: 6 9
- *  8: 6 
- *  9: 11 10 
- *  10: 12 
- *  11: 4 12 
- *  12: 9 
- *  
+ *  8: 6
+ *  9: 11 10
+ *  10: 12
+ *  11: 4 12
+ *  12: 9
+ *
  ******************************************************************************/
 
 
@@ -37,7 +37,7 @@ import java.util.NoSuchElementException;
  *  iterate over all of the vertices adjacent from a given vertex.
  *  Parallel edges and self-loops are permitted.
  *  <p>
- *  This implementation uses an adjacency-lists representation, which 
+ *  This implementation uses an adjacency-lists representation, which
  *  is a vertex-indexed array of {@link Bag} objects.
  *  All operations take constant time (in the worst case) except
  *  iterating over the vertices adjacent from a given vertex, which takes
@@ -58,7 +58,7 @@ public class Digraph {
     private int E;                 // number of edges in this digraph
     private Bag<Integer>[] adj;    // adj[v] = adjacency list for vertex v
     private int[] indegree;        // indegree[v] = indegree of vertex v
-    
+
     /**
      * Initializes an empty digraph with <em>V</em> vertices.
      *
@@ -76,7 +76,7 @@ public class Digraph {
         }
     }
 
-    /**  
+    /**
      * Initializes a digraph from the specified input stream.
      * The format is the number of vertices <em>V</em>,
      * followed by the number of edges <em>E</em>,
@@ -101,7 +101,7 @@ public class Digraph {
             for (int i = 0; i < E; i++) {
                 int v = in.readInt();
                 int w = in.readInt();
-                addEdge(v, w); 
+                addEdge(v, w);
             }
         }
         catch (NoSuchElementException e) {
@@ -130,10 +130,10 @@ public class Digraph {
             }
         }
     }
-        
+
     /**
      * Returns the number of vertices in this digraph.
-     *
+     * Time complexity is O(1).
      * @return the number of vertices in this digraph
      */
     public int V() {
@@ -142,7 +142,7 @@ public class Digraph {
 
     /**
      * Returns the number of edges in this digraph.
-     *
+     * Time complexity is O(1).
      * @return the number of edges in this digraph
      */
     public int E() {
@@ -151,6 +151,7 @@ public class Digraph {
 
 
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
+    //Time complexity is O(1).
     private void validateVertex(int v) {
         if (v < 0 || v >= V)
             throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
@@ -158,7 +159,7 @@ public class Digraph {
 
     /**
      * Adds the directed edge v→w to this digraph.
-     *
+     * Time complexity is O(1).
      * @param  v the tail vertex
      * @param  w the head vertex
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
@@ -173,7 +174,7 @@ public class Digraph {
 
     /**
      * Returns the vertices adjacent from vertex {@code v} in this digraph.
-     *
+     * Time complexity is O(1).
      * @param  v the vertex
      * @return the vertices adjacent from vertex {@code v} in this digraph, as an iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -186,9 +187,9 @@ public class Digraph {
     /**
      * Returns the number of directed edges incident from vertex {@code v}.
      * This is known as the <em>outdegree</em> of vertex {@code v}.
-     *
+     * Time complexity is O(1).
      * @param  v the vertex
-     * @return the outdegree of vertex {@code v}               
+     * @return the outdegree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public int outdegree(int v) {
@@ -199,9 +200,9 @@ public class Digraph {
     /**
      * Returns the number of directed edges incident to vertex {@code v}.
      * This is known as the <em>indegree</em> of vertex {@code v}.
-     *
+     * Time complexity is O(1).
      * @param  v the vertex
-     * @return the indegree of vertex {@code v}               
+     * @return the indegree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public int indegree(int v) {
@@ -211,7 +212,8 @@ public class Digraph {
 
     /**
      * Returns the reverse of the digraph.
-     *
+     * Time complexity is O(V).
+     * V is the number of vertices.
      * @return the reverse of the digraph
      */
     public Digraph reverse() {
@@ -226,8 +228,9 @@ public class Digraph {
 
     /**
      * Returns a string representation of the graph.
-     *
-     * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,  
+     * Time complexity is O(V).
+     * V is the number of vertices.
+     * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,
      *         followed by the <em>V</em> adjacency lists
      */
     public String toString() {

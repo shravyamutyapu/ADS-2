@@ -10,8 +10,8 @@
  *  This version uses a static nested class Node (to save 8 bytes per
  *  Node), whereas the version in the textbook uses a non-static nested
  *  class (for simplicity).
- *  
- *  % more tobe.txt 
+ *
+ *  % more tobe.txt
  *  to be or not to - be - - that - - - is
  *
  *  % java Stack < tobe.txt
@@ -66,7 +66,7 @@ public class Stack<Item> implements Iterable<Item> {
 
     /**
      * Returns true if this stack is empty.
-     *
+     * Time complexity is O(1).
      * @return true if this stack is empty; false otherwise
      */
     public boolean isEmpty() {
@@ -75,7 +75,7 @@ public class Stack<Item> implements Iterable<Item> {
 
     /**
      * Returns the number of items in this stack.
-     *
+     * Time complexity is O(1).
      * @return the number of items in this stack
      */
     public int size() {
@@ -84,7 +84,7 @@ public class Stack<Item> implements Iterable<Item> {
 
     /**
      * Adds the item to this stack.
-     *
+     * Time complexity is O(1).
      * @param  item the item to add
      */
     public void push(Item item) {
@@ -97,7 +97,7 @@ public class Stack<Item> implements Iterable<Item> {
 
     /**
      * Removes and returns the item most recently added to this stack.
-     *
+     * Time complexity is O(1).
      * @return the item most recently added
      * @throws NoSuchElementException if this stack is empty
      */
@@ -112,7 +112,7 @@ public class Stack<Item> implements Iterable<Item> {
 
     /**
      * Returns (but does not remove) the item most recently added to this stack.
-     *
+     * Time complexity is O(1).
      * @return the item most recently added to this stack
      * @throws NoSuchElementException if this stack is empty
      */
@@ -134,7 +134,7 @@ public class Stack<Item> implements Iterable<Item> {
         }
         return s.toString();
     }
-       
+
 
     /**
      * Returns an iterator to this stack that iterates through the items in LIFO order.
@@ -164,7 +164,7 @@ public class Stack<Item> implements Iterable<Item> {
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
