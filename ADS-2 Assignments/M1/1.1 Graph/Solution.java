@@ -1,25 +1,21 @@
 /**.
- * { item_description }
+ * importing files.
  */
 import java.util.Scanner;
 /**.
- * { item_description }
+ * solution class.
  */
 public final class Solution {
     /**.
-     * Constructs the object.
+     * constructor.
      */
     private Solution() {
-        /**.
-         * { item_description }
-         */
+        //unused.
     }
     /**.
-     * { function_description }
-     *
-     * @param      args  The arguments
+     * time complexity for the main method is N.
+     * @param args  The arguments
      */
-    // time complexity for the main method is N
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String word = sc.nextLine();

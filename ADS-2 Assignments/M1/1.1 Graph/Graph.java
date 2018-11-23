@@ -14,7 +14,7 @@ interface Graph {
     int edge();
     /**.
      * Adds an edge.
-     *
+     * complexity is O(1).
      * @param v vertice.
      * @param w w.
      */
@@ -29,7 +29,7 @@ interface Graph {
     Iterable<Integer> adj(int v);
     /**.
      * Determines if it has edge.
-     *
+     * complexity is O(1).
      * @param v vertex.
      * @param w w.
      *
@@ -150,7 +150,7 @@ class GraphList implements Graph {
 
     /**
      * Returns the degree of vertex {@code v}.
-     *
+     * complexity is O(1).
      * @param  v the vertex
      * @return the degree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}

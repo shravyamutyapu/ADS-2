@@ -40,6 +40,7 @@ public class Bag<Item> implements Iterable<Item> {
 
     /**
       * Is the BAG empty?
+      * complexity is O(1).
       * @return bool.
       */
     public boolean isEmpty() {
@@ -48,6 +49,7 @@ public class Bag<Item> implements Iterable<Item> {
 
     /**
       * Return the number of items in the bag.
+      * complexity is O(1).
       * @return size.
       */
     public int size() {
@@ -56,6 +58,7 @@ public class Bag<Item> implements Iterable<Item> {
 
     /**
       * Add the item to the bag.
+      * complexity is O(1).
       * @param item item.
       */
     public void add(final Item item) {
@@ -70,6 +73,7 @@ public class Bag<Item> implements Iterable<Item> {
     /**
       * Return an iterator that
       * iterates over the items in the bag.
+      * complexity is O(N).
       * @return iterator.
       */
     public Iterator<Item> iterator()  {
@@ -87,6 +91,7 @@ public class Bag<Item> implements Iterable<Item> {
         private Node current = first;
         /**
          * returns true/false.
+         * complexity is O(1).
          * @return bool value[description]
          */
         public boolean hasNext() {
@@ -94,12 +99,14 @@ public class Bag<Item> implements Iterable<Item> {
         }
         /**
          * removes.
+         * complexity is O(1).
          */
         public void remove() {
             throw new UnsupportedOperationException();
         }
         /**
          * next item.
+         * complexity is O(1).
          * @return description
          */
         public Item next() {

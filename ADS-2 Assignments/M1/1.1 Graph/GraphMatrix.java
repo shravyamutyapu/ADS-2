@@ -3,18 +3,16 @@
  */
 interface GraphM {
     /**.
-     *
-     * @return vertices.
+     *vertices.
      */
     int vert();
     /**.
-     *
-     * @return edges.
+     *edges.
      */
     int edge();
     /**.
      * Adds an edge.
-     *
+     * complexity is O(1).
      * @param v vert.
      * @param w w.
      */
@@ -45,11 +43,11 @@ public class GraphMatrix {
      */
     private int[][] adj;
     /**.
-     *
+     * array.
      */
     private String[] vertices;
     /**.
-     * { var_description }
+     * size.
      */
     private int size = 0;
     /**.
@@ -65,9 +63,8 @@ public class GraphMatrix {
         size = 0;
     }
     /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
+     * complexity is O(1).
+     * @return vertices.
      */
     public int vert() {
         return ver;
@@ -75,14 +72,14 @@ public class GraphMatrix {
     /**.
      * .
      * time complexity is 1.
-     * @return int.
+     * @return edges.
      */
     public int edge() {
         return edg;
     }
     /**.
      * Adds a vertex.
-     *
+     * complexity is O(1).
      * @param v adding vertex.
      */
     public void addVertex(final String v) {
@@ -90,7 +87,7 @@ public class GraphMatrix {
         size++;
     }
     /**
-     * time complexity is 1.
+     * time complexity is O(1).
      * @param  v vert.
      * @param  w w.
      */
@@ -108,7 +105,7 @@ public class GraphMatrix {
     }
     /**.
      * checks if it contains or not.
-     * time complexity is 1.
+     * time complexity is O(1).
      * @param v v.
      * @param w w.
      * @return int.
