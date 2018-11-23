@@ -41,7 +41,7 @@ public class DijkstraUndirectedSP {
 
     /**
      * {relax edge e and update pq if changed}.
-     *
+     * Time complexity of O(1).
      * @param      e     {Edge object}
      * @param      v     {Source vertex}
      */
@@ -59,7 +59,7 @@ public class DijkstraUndirectedSP {
     }
 
     /**
-     *
+     * Time complexity of O(1).
      * @param  v the destination vertex.
      * @return the length of a shortest path between the source vertex
      * and the vertex.
@@ -70,7 +70,7 @@ public class DijkstraUndirectedSP {
     }
 
     /**
-     *
+     * Time complexity of O(1).
      * @param  v the destination vertex
      * @return {@code true} if there is a path between vertex
      * {@code s} to vertex {@code v};

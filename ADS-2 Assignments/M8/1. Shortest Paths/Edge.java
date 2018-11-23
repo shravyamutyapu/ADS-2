@@ -27,13 +27,15 @@ public class Edge implements Comparable<Edge> {
     }
     /**
      *weight method.
+     * Time complexity is O(1).
      * @return weight.
      */
     public double weight() {
         return weight;
     }
     /**
-     *that vertex.
+     * that vertex.
+     * Time complexity is O(1).
      * @return vertex.
      */
     public int either() {
@@ -42,7 +44,7 @@ public class Edge implements Comparable<Edge> {
     /**
      *  next vertex.
      * @param      vertex  The vertex
-     *
+     * Time complexity is O(1).
      * @return other vertex.
      */
     public int other(final int vertex) {
@@ -58,7 +60,7 @@ public class Edge implements Comparable<Edge> {
     }
     /**
      * compare to method.
-     *
+     * Time complexity is O(1).
      * @param      that  The that
      *
      * @return  integer.
