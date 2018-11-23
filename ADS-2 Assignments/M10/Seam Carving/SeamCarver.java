@@ -26,6 +26,7 @@ public class SeamCarver {
 
 
     /**
+     * Time complexity of O(1).
      * picture method.
      *
      * @return picture.
@@ -39,14 +40,16 @@ public class SeamCarver {
      * @return width.
      */
 
-
+    /**
+     * Time complexity of O(1).
+     */
     public int width() {
         return this.picture.width();
     }
 
     /**
      * // height of current picture.
-     *
+     * Time complexity of O(1).
      * @return height of current picture.
      */
     public int height() {
@@ -55,7 +58,7 @@ public class SeamCarver {
 
     /**
      * // energy of pixel at column x and row y.
-     *
+     * Time complexity of O(1).
      * @param      x  integer.
      * @param      y  integer.
      *
@@ -74,7 +77,7 @@ public class SeamCarver {
 
     /**
      * // energy of pixel at column x and row y not on boarder
-     *
+     * Time complexity of O(1).
      * @param      x  integer
      * @param      y  integer
      *
@@ -89,7 +92,7 @@ public class SeamCarver {
     }
     /**
      * gradient method.
-     *
+     * Time complexity of O(1).
      * @param      one   One
      * @param      two   Two
      *
@@ -102,6 +105,7 @@ public class SeamCarver {
         return red * red + green * green + blue * blue;
     }
     /**
+     * Time complexity of O(height*width).
      * energy storage.
      *
      * @return  energies
@@ -118,6 +122,7 @@ public class SeamCarver {
     /**
      *  // pass through an array and mark the.
      *   shorthest distance from top to entry.
+     *   Time complexity of O(row*col).
      *
      * @param      energies  The energies
      */
@@ -146,6 +151,7 @@ public class SeamCarver {
     }
     /**
      * transpose matrix.
+     * Time complexity of O(row*col).
      *
      * @param      energies  The energies
      *
@@ -163,6 +169,8 @@ public class SeamCarver {
     }
     /**
      * vertical path.
+     * Time complexity is O(w).
+     * w = length of row.
      *
      * @param      energies  The energies
      *
@@ -199,7 +207,7 @@ public class SeamCarver {
     }
     /**
      * // sequence of indices for horizontal seam.
-     *
+     *  Time complexity is O(1).
      * @return  // sequence of indices for horizontal seam.
      */
     public int[] findHorizontalSeam() {
@@ -208,7 +216,7 @@ public class SeamCarver {
     }
    /**
     *  // sequence of indices for vertical seam.
-    *
+    *  Time complexity is O(1).
     * @return   // sequence of indices for vertical seam.
     */
     public int[] findVerticalSeam() {
@@ -217,7 +225,8 @@ public class SeamCarver {
     }
     /**
      * Removes a horizontal seam.
-     *
+     *  Time complexity is O(w*h).
+     *  w = width , h = height.
      * @param      a int array.
      */
     public void removeHorizontalSeam(final int[] a) {
@@ -241,7 +250,8 @@ public class SeamCarver {
 
     /**
      * Removes a vertical seam.
-     *
+     * Time complexity is O(w*h).
+     *  w = width , h = height.
      * @param      a  int array.
      */
     public void removeVerticalSeam(final int[] a) {
@@ -265,6 +275,14 @@ public class SeamCarver {
     }
 
     // return false if two consecutive entries differ by more than 1
+    /**
+     * Time complexity is O(len).
+     *  len is the size of array.
+     * @param int [description]
+     * @param int [description]
+     * @param int [description]
+     * @return [description]
+     */
     private boolean isValid(final int[] a, final int len, final int range) {
         if (a == null) {
             return false;
