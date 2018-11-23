@@ -41,7 +41,9 @@ public class LazyPrimMST {
     }
     /**
      * weight method.
-     *
+     * Time complexity is O(E logV)
+     * E is the number of edges.
+     * V is the number of vertices.
      * @param      g     graph
      * @param      s     integer
      */
@@ -68,7 +70,8 @@ public class LazyPrimMST {
     }
     /**
      * scan method.
-     *
+     * Time complexity is O(E).
+     * E is the number of edges.
      * @param      g  graph.
      * @param      v  int
      */
@@ -83,6 +86,8 @@ public class LazyPrimMST {
     }
     /**
      *Iterable edges.
+     * Time complexity is O(E).
+     * E is the number of edges.
      * @return   iterable edge.
      */
     public Iterable<Edge> edges() {
@@ -90,7 +95,7 @@ public class LazyPrimMST {
     }
     /**
      * weight method.
-     *
+     * Time complexity is O(1).
      * @return weight.
      */
     public double weight() {

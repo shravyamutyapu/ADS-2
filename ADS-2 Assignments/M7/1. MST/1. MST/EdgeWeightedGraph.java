@@ -30,7 +30,7 @@ public class EdgeWeightedGraph {
 
     /**
      * return vertices.
-     *
+     * Time complexity is O(1).
      * @return vertex count
      */
     public int vertices() {
@@ -38,7 +38,7 @@ public class EdgeWeightedGraph {
     }
     /**
      * return edges.
-     *
+     * Time complexity is O(1).
      * @return edge count
      */
     public int edges() {
@@ -46,7 +46,7 @@ public class EdgeWeightedGraph {
     }
     /**
      * Adds an edge.
-     *
+     * Time complexity is O(1).
      * @param      e Edge object
      */
     public void addEdge(final Edge e) {
@@ -58,7 +58,8 @@ public class EdgeWeightedGraph {
     }
     /**
      * returns adjacent vertex.
-     *
+     * Time complexity is O(v).
+     * v is the number of vertices.
      * @param      v integer.
      *
      * @return  adjacent vertex.
@@ -70,6 +71,7 @@ public class EdgeWeightedGraph {
     /**
      * degree that gives size of adjacent list.
      *
+     * Time complexity is O(1).
      * @param      v vertex.
      *
      * @return degree.
@@ -80,7 +82,8 @@ public class EdgeWeightedGraph {
     }
     /**
      * edges that iterates and add.
-     *
+     * Time complexity is O(V).
+     * V is the number of vertices.
      * @return iterable list.
      */
     public Iterable<Edge> edge() {
