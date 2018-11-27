@@ -10,8 +10,9 @@ public class SAP {
 		ancestor = -1;
 	}
     /**
-     * Time complexity is O(V).
+     * Time complexity is O(V*w*V).
      * V is the number of vertices.
+     * W is length of array list.
      * @param v [description]
      * @param w [description]
      *

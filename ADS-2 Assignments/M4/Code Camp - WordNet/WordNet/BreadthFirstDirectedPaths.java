@@ -66,6 +66,8 @@ public class BreadthFirstDirectedPaths {
     }
 
     // BFS from multiple sources
+       //* Time complexity is O(V).
+    //V is the number of vertices.
     private void bfs(Digraph G, Iterable<Integer> sources) {
         Queue<Integer> q = new Queue<Integer>();
         for (int s : sources) {
@@ -112,6 +114,8 @@ public class BreadthFirstDirectedPaths {
     }
 
     /**
+     *    *//* Time complexity is O(V).
+    //V is the number of vertices.
      * Returns a shortest path from {@code s} (or sources) to {@code v}, or
      * {@code null} if no such path.
      * @param v the vertex
