@@ -25,7 +25,13 @@ public class Bipartite {
         }
         //assert check(G);
     }
-
+    /**
+     * perform dfs for the graph.
+     * Time complexity is O(E).
+     * E is the number of edges.
+     * @param G graph
+     * @param v vertices.
+     */
     private void dfs(Graph G, int v) {
         marked[v] = true;
         for (int w : G.adj(v)) {
@@ -55,7 +61,7 @@ public class Bipartite {
 
     /**
      * Returns true if the graph is bipartite.
-     *
+     * Time complexity is O(1).
      * @return {@code true} if the graph is bipartite; {@code false} otherwise
      */
     public boolean isBipartite() {
@@ -64,7 +70,7 @@ public class Bipartite {
 
     /**
      * Returns the side of the bipartite that vertex {@code v} is on.
-     *
+     * Time complexity is O(1).
      * @param  v the vertex
      * @return the side of the bipartition that vertex {@code v} is on; two vertices
      *         are in the same side of the bipartition if and only if they have the
@@ -80,17 +86,7 @@ public class Bipartite {
         return color[v];
     }
 
-    /**
-     * Returns an odd-length cycle if the graph is not bipartite, and
-     * {@code null} otherwise.
-     *
-     * @return an odd-length cycle if the graph is not bipartite
-     *         (and hence has an odd-length cycle), and {@code null}
-     *         otherwise
-     */
-    public Iterable<Integer> oddCycle() {
-        return cycle;
-    }
+
 
     // private boolean check(Graph G) {
     //     // graph is bipartite
@@ -121,7 +117,7 @@ public class Bipartite {
 
     //     return true;
     // }
-
+    //Time complexity is O(1).
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
     private void validateVertex(int v) {
         int V = marked.length;
