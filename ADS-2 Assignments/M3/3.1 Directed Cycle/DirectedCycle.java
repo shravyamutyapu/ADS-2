@@ -36,6 +36,12 @@ public class DirectedCycle {
 
     // check that algorithm computes
     //either the topological order or finds a directed cycle
+    /**
+     * Time complexity is O(E).
+     * E is number of Edges.
+     * @param g object of digraph.
+     * @param v vertices.
+     */
     private void dfs(Digraph g, int v) {
         onStack[v] = true;
         marked[v] = true;
@@ -65,6 +71,7 @@ public class DirectedCycle {
     }
 
     /**
+     * Time complexity is O(1).
      * Does the digraph have a directed cycle?
      * @return {@code true} if the digraph
      * has a directed cycle, {@code false} otherwise
@@ -74,6 +81,7 @@ public class DirectedCycle {
     }
 
     /**
+     * Time complexity is O(1).
      * Returns a directed cycle if the digraph has a
      * directed cycle, and {@code null} otherwise.
      * @return a directed cycle (as an iterable) if

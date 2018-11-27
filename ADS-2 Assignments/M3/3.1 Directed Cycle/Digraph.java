@@ -117,6 +117,8 @@ public class Digraph {
 	}
 	/**
 	 * has edge method.
+	 * Time complexity is O(E).
+	 * E is the number of Edges.
 	 * @param v vertex.
 	 * @param w vertex.
 	 *
@@ -150,7 +152,7 @@ public class Digraph {
 	/**
 	 * Returns the vertices adjacent
 	 * from vertex {@code v} in this digraph.
-	 * time complexity is O(N).
+	 * time complexity is O(1).
 	 * @param  v the vertex
 	 * @return the vertices adjacent from vertex
 	 * {@code v} in this digraph, as an iterable

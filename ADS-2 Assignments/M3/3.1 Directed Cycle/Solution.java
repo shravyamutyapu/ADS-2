@@ -7,7 +7,8 @@ public final class Solution {
         //unused.
     }
     /**.
-     *
+     * Time complexity is O(N).
+     * N is number of edges.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
